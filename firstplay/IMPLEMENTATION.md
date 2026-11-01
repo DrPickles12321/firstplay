@@ -53,7 +53,7 @@ Synthetic draft evaluations remain development diagnostics. Earlier reports usin
 
 ## Release scope
 
-Supported verification environment: macOS, Chrome, Node 22.22.3, Codex CLI 0.164.0-alpha.11.1. There are no project npm dependencies. The CLI release is publicly available. A read-only CI workflow for Linux controlled tests and macOS native fixtures is prepared; the first remote CI run is being checked after publication.
+Supported verification environment: macOS, Chrome, Node 22.22.3, Codex CLI 0.164.0-alpha.11.1. There are no project npm dependencies. The CLI release is publicly available. A read-only CI workflow covers Linux controlled tests and macOS native fixtures; [current remote results](https://github.com/DrPickles12321/firstplay/actions/workflows/check.yml) are public.
 
 The source ZIP uses an explicit allowlist and checks against configured local secrets and private capability links. It excludes `.env`, `.data`, artifacts, gameplay media and the unrelated legacy prototype. An extracted source check is part of final delivery. Original OCR fixtures are generated from bundled native source.
 

@@ -9,7 +9,7 @@ The local desktop pilot is implemented and verified. The [source repository](htt
 - Source archive: `artifacts/firstplay-source.zip`, with a separate SHA-256 file manifest. It excludes credentials, capabilities, saved chat/state, artifacts, third-party gameplay and the legacy prototype.
 - Captioned silent demo draft: `artifacts/firstplay-demo-draft.mp4` — **2 minutes 10 seconds**, 1920×1080, genuine UI captures and original test imagery. It is a walkthrough assembled from actual stills, not a live screencast.
 - [Submission description](firstplay-submission-draft.md), [judge setup](firstplay-judge-quickstart.md), [optional narration script](firstplay-demo-script.md), [current evidence](../firstplay/IMPLEMENTATION.md) and [scope/privacy](firstplay-privacy-and-scope.md).
-- [Read-only GitHub Actions checks](https://github.com/DrPickles12321/firstplay/actions/workflows/check.yml) run on repository pushes; the initial remote result is being verified.
+- [Read-only GitHub Actions checks](https://github.com/DrPickles12321/firstplay/actions/workflows/check.yml) run on repository pushes; current results are linked publicly.
 
 The release checks passed 131 controlled tests, 61 JS syntax checks, nine original native OCR pairs, real-model before/after/undo and a fresh two-message Twitch integration check. Saved Mario/Subnautica progress and four genuine assisted review judgments were preserved. These are bounded implementation checks, not representative model-accuracy measurements.
 
