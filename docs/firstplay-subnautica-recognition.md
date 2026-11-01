@@ -22,7 +22,7 @@ A separate FirstPlay controls page reports when another tab is doing the capture
 | Cave Sulfur beneath a Flare title in Blueprints | Cave Sulfur name | The Flare recipe relationship |
 | Central Writhing Weed or Creepvine target label, nearby interaction prompt and oxygen HUD | Each target name separately | Harvesting, required tools or resource uses |
 
-Names must match exactly after Unicode/whitespace normalization and appear in consistent positions in both frames. Strong name/header checks use heuristic OCR score thresholds; they are not calibrated probabilities. Mixed number/glyph context such as H₂O or O₂ has a lower threshold and never grants numerical/property knowledge.
+Names must match exactly after Unicode/whitespace normalization and appear in consistent positions in both frames. Strong name/header checks use heuristic OCR score thresholds; they are not calibrated probabilities. Mixed number/glyph context such as H₂O or O₂ has a lower threshold and never grants numerical/property knowledge. Vision on newer macOS can emit Cyrillic H/O lookalikes in the water marker; those are accepted only in that numeric tooltip context. Item names remain exact, and their confidence requirements are unchanged.
 
 The automatic gate requires **two consecutive non-overlapping frame pairs**, four frames total, from the same source, generation and policy epoch. A missing/weak check, source change, failed check or gap over 12 seconds resets accumulated evidence. Replaying a pair cannot advance it. Normal sampling is about every three seconds with a one-second gap within a pair; this is scheduling, not a latency guarantee.
 

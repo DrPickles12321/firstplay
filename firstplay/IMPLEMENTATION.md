@@ -29,7 +29,7 @@ Evidence and exact before/after knowledge changes are private and auditable. Und
 
 | Check | Actual result |
 |---|---|
-| Controlled tests / JavaScript syntax | 130 tests and 61 files passed in the release preflight |
+| Controlled tests / JavaScript syntax | 131 tests and 61 files passed in the release preflight |
 | Native OCR / HTTP | Nine pairs of original fixtures exercised all eight mappings plus negative contexts; no external image model |
 | Real text-model before/after/undo | Eight synthetic messages passed the expected containment/delivery and state/authority checks |
 | Native + real text model | Named reaction hidden before a single-fact grant and allowed after; water-making instruction rejected in both phases |
@@ -40,6 +40,8 @@ Evidence and exact before/after knowledge changes are private and auditable. Und
 | Private model health | Real Codex request succeeded without creating chat, receipts or knowledge |
 
 The Twitch check used one offline desktop channel. These checks are implementation evidence, not representative classification accuracy, gameplay precision/recall, multilingual validation or high-volume load certification. The automatic recording examples do not establish broad visual accuracy. Mario positive gameplay recognition remains unvalidated.
+
+The first remote macOS 26 run exposed a water-marker OCR difference: Vision returned a Cyrillic H in the original positive fixture. The detector now handles the observed H/O lookalikes only within that numeric context, with a regression preserving exact item names and confidence thresholds.
 
 Machine-readable local evidence is ignored under `artifacts/`: `firstplay-release-check.json`, `firstplay-check-latest.json`, `firstplay-recognition-check.json`, `firstplay-source-restart-check.json` and the final source-verification report. Live-check output is retained locally without credentials. Genuine UI images used in the demo are actual captures, not generated UI.
 

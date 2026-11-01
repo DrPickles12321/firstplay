@@ -11,7 +11,7 @@ The local desktop pilot is implemented and verified. The [source repository](htt
 - [Submission description](firstplay-submission-draft.md), [judge setup](firstplay-judge-quickstart.md), [optional narration script](firstplay-demo-script.md), [current evidence](../firstplay/IMPLEMENTATION.md) and [scope/privacy](firstplay-privacy-and-scope.md).
 - [Read-only GitHub Actions checks](https://github.com/DrPickles12321/firstplay/actions/workflows/check.yml) run on repository pushes; the initial remote result is being verified.
 
-The release checks passed 130 controlled tests, 61 JS syntax checks, nine original native OCR pairs, real-model before/after/undo and a fresh two-message Twitch integration check. Saved Mario/Subnautica progress and four genuine assisted review judgments were preserved. These are bounded implementation checks, not representative model-accuracy measurements.
+The release checks passed 131 controlled tests, 61 JS syntax checks, nine original native OCR pairs, real-model before/after/undo and a fresh two-message Twitch integration check. Saved Mario/Subnautica progress and four genuine assisted review judgments were preserved. These are bounded implementation checks, not representative model-accuracy measurements.
 
 ## Final publication actions
 

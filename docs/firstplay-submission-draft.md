@@ -41,7 +41,7 @@ The hardest distinction was between an observed name and inferred future knowled
 ## What works today
 
 - Real Twitch → EventSub → Codex → installed reader verification: a greeting rendered and received a receipt; a gameplay instruction stayed absent. Both original posts remained in ordinary Twitch chat.
-- 130 controlled tests, 61 JavaScript syntax checks and nine native OCR fixture pairs passed the release preflight.
+- 131 controlled tests, 61 JavaScript syntax checks and nine native OCR fixture pairs passed the release preflight.
 - Real-model before/after/undo checks passed. A genuine recording established the PDA screen automatically; original fixtures exercise all eight supported mappings.
 - Separate saved game runs, expiring review, private reasons, evidence/history/Undo, one-hint requests, viewer status and isolated rehearsal tools are implemented.
 

@@ -20,6 +20,19 @@ test('consistent inventory name plus tooltip context recognizes only the Boomera
   assert.equal(response.value.events.length, 1); assert.equal(detector.factId, 'sn1.boomerang.named'); assert.deepEqual(response.value.events[0].positive_frame_indices, [0, 1]);
 });
 
+test('Vision water-marker lookalikes are context only and never normalize item names', async () => {
+  // Actual macOS 26 Vision output for the original positive fixture was Cyrillic Н20.
+  for (const marker of ['\u041d20: -3', 'H2\u041e: -3', '\u041d2\u041e: -3']) {
+    const observed = frame(); observed.lines[3].text = marker;
+    const result = detectBoomerangName([observed, observed]); assert.equal(result.found, true); assert.equal(result.strict, true);
+    const response = await subnauticaLabelDetector({ recognizer: recognizer([observed, observed]) }).run({ imagePaths: [] });
+    assert.deepEqual(response.value.events.map(event => event.event_id), ['sn1.local.boomerang_name']);
+  }
+  const unrelated = frame(); unrelated.lines[3].text = 'N20: -3'; assert.equal(detectBoomerangName([unrelated, unrelated]).found, false);
+  const weak = frame(); weak.lines[3].text = '\u041d20: -3'; weak.lines[3].confidence = .29; assert.equal(detectBoomerangName([weak, weak]).found, false);
+  const disguisedName = frame(); disguisedName.lines[1].text = '\u0412oomerang'; assert.equal(detectBoomerangName([disguisedName, disguisedName]).found, false);
+});
+
 test('chat text, missing context, low-confidence names, changed items and moving labels stay unconfirmed', () => {
   const missingHeader = frame(); missingHeader.lines[0].text = 'viewer: INVENTORY';
   const chat = frame(); chat.lines[1].text = 'viewer: Boomerang';

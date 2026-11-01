@@ -87,7 +87,7 @@ The reader receives approved text only. It cannot fetch hidden messages, future 
 
 - **Subnautica opening:** 40 authored facts, nine relationships, 14 manual events and eight bounded automatic text mappings.
 - **Mario Cap → Cascade:** preserved separate run, 47 opening facts, nine relationships and curated events. The 836-objective Moon reference index represents 880 Moons; it is not a whole-game reveal graph. Mario image suggestions remain manual and their positive gameplay accuracy is unvalidated.
-- Latest release verification: **130 controlled tests, 61 JavaScript syntax checks**, nine native OCR fixture pairs, real-model before/after/undo and a fresh two-message Twitch → EventSub → model → installed-reader check.
+- Latest release verification: **131 controlled tests, 61 JavaScript syntax checks**, nine native OCR fixture pairs, real-model before/after/undo and a fresh two-message Twitch → EventSub → model → installed-reader check.
 - Four saved assisted human scene judgments remain intact. The 79-case Subnautica benchmark has **no completed independent human review**; synthetic draft-label scores are development diagnostics, not an accuracy claim.
 - Text screening usually takes several seconds on the tested Codex route. Representative high-volume chat, multilingual play and broad game coverage remain unvalidated. Display names, TTS, alerts and other chat clients remain exposure paths.
 

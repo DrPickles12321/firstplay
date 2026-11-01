@@ -73,7 +73,9 @@ function boomerangTooltip(frame) {
   if (!below(name, inventory, .6) || height < .008 || width < .025) return { reason: 'The item label is outside the expected inventory layout.' };
   const properties = frame.lines.filter(line => line.bounds[1] > y && line.bounds[1] - y < .23 && Math.abs(line.bounds[0] - x) < .12);
   const food = properties.find(line => line.confidence >= .3 && /^food\s*[:+−-]/i.test(clean(line.text)));
-  const water = properties.find(line => line.confidence >= .3 && /^h[2z][o0]\s*[:+−-]/i.test(clean(line.text)));
+  // Vision on newer macOS can emit Cyrillic H/O lookalikes in this numeric UI marker.
+  // Accept those only for tooltip context; item names still require their exact spelling.
+  const water = properties.find(line => line.confidence >= .3 && /^[h\u043d][2z][o0\u043e]\s*[:+−-]/i.test(clean(line.text)));
   if (!food || !water) return { reason: 'The inventory name is visible, but the tooltip context is too small or unclear. Enlarge the game view.' };
   return { name, evidence: [inventory, name, food, water], strict: name.confidence >= .95 && inventory.confidence >= .9 };
 }
