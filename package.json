@@ -1,0 +1,29 @@
+{
+  "name": "firstplay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env firstplay/server.mjs",
+    "test": "node --test firstplay/test/*.test.mjs",
+    "demo": "node --env-file-if-exists=.env firstplay/cli/demo.mjs",
+    "demo:check": "node --env-file-if-exists=.env firstplay/cli/demo-check.mjs",
+    "rehearsal:check": "node --env-file-if-exists=.env firstplay/cli/rehearsal-check.mjs",
+    "recognition:check": "node --env-file-if-exists=.env firstplay/cli/recognition-check.mjs",
+    "check": "node firstplay/cli/check.mjs",
+    "doctor": "node --env-file-if-exists=.env firstplay/cli/doctor.mjs",
+    "package:source": "node firstplay/cli/package.mjs",
+    "classify": "node --env-file-if-exists=.env firstplay/cli/classify.mjs",
+    "evaluate": "node --env-file-if-exists=.env firstplay/cli/evaluate.mjs",
+    "live-check": "node --env-file-if-exists=.env firstplay/cli/live-check.mjs",
+    "benchmark": "node --env-file-if-exists=.env firstplay/cli/benchmark.mjs",
+    "preview:extension": "node --env-file-if-exists=.env firstplay/cli/extension-preview.mjs",
+    "release:check": "node firstplay/cli/release-check.mjs",
+    "prestart": "node firstplay/cli/require-node.mjs",
+    "predemo": "node firstplay/cli/require-node.mjs",
+    "precheck": "node firstplay/cli/require-node.mjs"
+  }
+}

@@ -1,0 +1,52 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { ProgressObserver } from '../ml/observer.mjs';
+import { subnauticaLabelDetector } from '../ml/local-text.mjs';
+import { GameCatalog } from '../ml/catalog.mjs';
+import { EncryptedStore } from '../runtime/store.mjs';
+import { ScreeningEngine } from '../runtime/engine.mjs';
+import { createApplication } from '../server.mjs';
+const catalog = await GameCatalog.load('subnautica'), owner = { id: 'recovery-test-owner', role: 'owner' };
+const line = (text, y) => ({ text, confidence: 1, bounds: [.18, y, .13, .03] });
+const frame = { width: 1280, height: 720, lines: [line('INVENTORY', .15), line('Boomerang', .3), line('FOOD: +8', .35), line('H2O: -3', .4)] };
+const detector = () => subnauticaLabelDetector({ recognizer: { async recognize() { return { frames: [frame, frame], metrics: { provider: 'controlled-ocr' } }; } } });
+const image = 'data:image/png;base64,iVBOR0Zha2U=';
+
+test('a service restart restores a recent source identity, but never its pending permission evidence', async t => {
+ let now = 1000; const store = new EncryptedStore(); t.after(() => store.close());
+ const engine = new ScreeningEngine({ catalog, store, clock: () => now }); t.after(() => engine.close());
+ const first = new ProgressObserver({ catalog, store, clock: () => now, localDetector: detector() });
+ const source = first.beginSource('window', owner); await first.observe([image, image], engine.epoch, undefined, { ...source, mediaTimes: [1, 2] });
+ assert.deepEqual(first.automaticProgress.process({ observer: first, engine, actor: owner }), []); first.close();
+ now += 3000; const restored = new ProgressObserver({ catalog, store, clock: () => now, localDetector: detector() }); t.after(() => restored.close());
+ assert.deepEqual(restored.source, source); assert.equal(restored.list().length, 0);
+ await restored.observe([image, image], engine.epoch, undefined, { ...source, mediaTimes: [4, 5] }); assert.deepEqual(restored.automaticProgress.process({ observer: restored, engine, actor: owner }), []);
+ assert.equal(engine.ledger.state.factIds.length, 0, 'Evidence from before restart cannot complete an automatic grant.');
+ assert.deepEqual(store.get('observation-source', 'active', now), source, 'The lease contains only ID, generation and source kind.');
+ const next = restored.invalidateSource(source.id, 0, owner); assert.equal(store.get('observation-source', 'active', now).generation, 1);
+ restored.invalidateSource(next.id, next.generation, owner, true); assert.equal(store.get('observation-source', 'active', now), null);
+});
+test('expired/synthetic sources are not restored, and recovery cannot steal a newer capture', t => {
+ let now = 1000; const store = new EncryptedStore(); t.after(() => store.close());
+ const first = new ProgressObserver({ catalog, store, clock: () => now, localDetector: detector() }); t.after(() => first.close()); const old = first.beginSource('recording', owner);
+ now += 120_001; const afterExpiry = new ProgressObserver({ catalog, store, clock: () => now, localDetector: detector() }); t.after(() => afterExpiry.close()); assert.equal(afterExpiry.source, null);
+ assert.throws(() => afterExpiry.recoverSource('recording', old.id, { id: 'viewer', role: 'viewer' }), /authorized/);
+ const recovered = afterExpiry.recoverSource('recording', old.id, owner); assert.notEqual(recovered.id, old.id);
+ const newer = afterExpiry.beginSource('window', owner); assert.throws(() => afterExpiry.recoverSource('recording', recovered.id, owner), error => error.code === 'source_in_use' && error.status === 409); assert.deepEqual(afterExpiry.source, newer);
+ afterExpiry.beginSource('synthetic', owner); const syntheticRestart = new ProgressObserver({ catalog, store, clock: () => now, localDetector: detector() }); t.after(() => syntheticRestart.close()); assert.equal(syntheticRestart.source, null);
+});
+test('HTTP recovery distinguishes lost sources from a newer owner source without bypassing run or reader authority', async t => {
+ const enabled = new GameCatalog(structuredClone(catalog.pack), undefined, undefined, { ...catalog.definition, localObservationEnabled: true });
+ const app = await createApplication({ catalog: enabled, store: new EncryptedStore(), provider: { name: 'unused' }, config: { port: 0, clientId: '', clientSecret: '', viewerOrigin: '', rehearsal: true } }); const base = await app.start(); t.after(() => app.close());
+ const headers = { Origin: base, 'X-FirstPlay-Client': '1', 'Content-Type': 'application/json' };
+ const post = (path, body, extra = {}) => fetch(base + path, { method: 'POST', headers: { ...headers, ...extra }, body: JSON.stringify(body) });
+ const login = await post('/api/local-session', {}); headers.Cookie = login.headers.get('set-cookie').split(';')[0];
+ const control = await (await fetch(base + '/api/control', { headers })).json(), expectedRunId = control.session.runId;
+ const original = app.observer.beginSource('window', owner); app.observer.invalidateSource(original.id, 0, owner, true);
+ const missing = await post('/api/observe', { frames: [image, image], source: { ...original, mediaTimes: [1, 2] }, expectedRunId }); assert.equal((await missing.json()).code, 'source_changed');
+ const data = { kind: 'window', recover: true, previousId: original.id, expectedRunId };
+ assert.equal((await post('/api/observations/source', data, { Authorization: 'Bearer ' + control.links.reader })).status, 403);
+ assert.equal((await post('/api/observations/source', { ...data, expectedRunId: 'old' })).status, 409);
+ const response = await post('/api/observations/source', data); assert.equal(response.status, 200); const { source } = await response.json();
+ const newer = app.observer.beginSource('window', owner); const conflict = await post('/api/observations/source', { ...data, previousId: source.id }); assert.equal(conflict.status, 409); assert.equal((await conflict.json()).code, 'source_in_use'); assert.equal(app.observer.source.id, newer.id);
+});

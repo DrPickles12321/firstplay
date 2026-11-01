@@ -1,0 +1,251 @@
+{
+  "id": "sn1.part1.hh5dckAV5Pg",
+  "status": "research_source_not_bundled",
+  "video_id": "hh5dckAV5Pg",
+  "url": "https://www.youtube.com/watch?v=hh5dckAV5Pg",
+  "title": "Subnautica Free To Use Gameplay Footage [Part 1]",
+  "creator": "Royalty Free Game Clips",
+  "published_at": "2025-11-23",
+  "duration_seconds": 632.641,
+  "duration_display": "10:32",
+  "game": "Subnautica (original)",
+  "platform_claim": "PC (uploader description)",
+  "game_build": "not established",
+  "game_mode": "HUD includes food/water/oxygen; Survival versus Hardcore not established",
+  "language_observed": "English HUD/tooltips",
+  "review_method": "Decoded browser point samples; not continuous review. Transient black/seeking frames excluded.",
+  "earliest_event_times_validated": false,
+  "full_interval_annotations_validated": false,
+  "may_drive_runtime_knowledge": false,
+  "rights": {
+    "creator_permission": "Published description permits commercial/noncommercial reuse of the recording; no new creator contact planned.",
+    "attribution_required_by_creator": false,
+    "credit_recommended": "Gameplay recording: Royalty Free Game Clips; game: Subnautica / Unknown Worlds.",
+    "publisher_policy_source": "publisher",
+    "blanket_clearance_established": false,
+    "outstanding": "Publisher licensing and AI-input applicability questions remain; uploader video reuse terms alone do not clear every use.",
+    "downloaded": false,
+    "bundled": false,
+    "model_input_clearance_established": false
+  },
+  "observations": [
+    {
+      "at_seconds": 5,
+      "kind": "point_sample",
+      "observation": "Launch countdown inside lifepod.",
+      "candidate_fact_suffixes": [
+        "lifepod.visible"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 45,
+      "kind": "point_sample",
+      "observation": "Fire; extinguisher on floor.",
+      "candidate_fact_suffixes": [
+        "fire.visible",
+        "extinguisher.visible"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 55,
+      "kind": "point_sample",
+      "observation": "Held extinguisher emitting spray.",
+      "candidate_fact_suffixes": [
+        "extinguisher.use_seen"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 60,
+      "kind": "point_sample",
+      "observation": "PDA boot/handheld view after tutorial.",
+      "candidate_fact_suffixes": [
+        "pda.visible"
+      ],
+      "must_not_infer": [
+        "fire_completion"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 90,
+      "kind": "point_sample",
+      "observation": "Inventory screen; no scanner established.",
+      "candidate_fact_suffixes": [
+        "pda.visible"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 120,
+      "kind": "point_sample",
+      "observation": "Surface view of damaged distant ship.",
+      "candidate_fact_suffixes": [
+        "ocean.visible",
+        "ship.visible"
+      ],
+      "must_not_infer": [
+        "ship_name",
+        "ship_future"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 180,
+      "kind": "point_sample",
+      "observation": "Writhing Weed target label underwater.",
+      "candidate_fact_suffixes": [
+        "writhing_weed.named"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 240,
+      "kind": "point_sample",
+      "observation": "Lifepod interior; extinguisher held.",
+      "candidate_fact_suffixes": [
+        "lifepod.visible",
+        "extinguisher.visible"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 270,
+      "kind": "point_sample",
+      "observation": "Boomerang tooltip in inventory/storage UI.",
+      "candidate_fact_suffixes": [
+        "boomerang.named",
+        "boomerang.possession_seen",
+        "boomerang.edibility_visible"
+      ],
+      "must_not_infer": [
+        "exact_nutrition_values"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 300,
+      "kind": "point_sample",
+      "observation": "Flare recipe tooltip; Seaglide 0/2 in PDA.",
+      "candidate_fact_suffixes": [
+        "flare.recipe_visible",
+        "seaglide.name_visible",
+        "seaglide.partial_display_seen"
+      ],
+      "must_not_infer": [
+        "scanner_crafted",
+        "seaglide_unlocked"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 360,
+      "kind": "point_sample",
+      "observation": "Underwater movement; extinguisher held.",
+      "candidate_fact_suffixes": [
+        "ocean.visible"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 420,
+      "kind": "point_sample",
+      "observation": "Underwater rock opening.",
+      "candidate_fact_suffixes": [
+        "ocean.visible"
+      ],
+      "must_not_infer": [
+        "precise_biome_or_hazard"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 480,
+      "kind": "point_sample",
+      "observation": "Creepvine label; fish held.",
+      "candidate_fact_suffixes": [
+        "creepvine.named",
+        "fish.visible"
+      ],
+      "must_not_infer": [
+        "held_fish_species",
+        "seed_collection"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 540,
+      "kind": "point_sample",
+      "observation": "Kelp vegetation; swimming.",
+      "candidate_fact_suffixes": [
+        "ocean.visible"
+      ],
+      "must_not_infer": [
+        "biome_name",
+        "seed_collection"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 600,
+      "kind": "point_sample",
+      "observation": "Climbing back into lifepod.",
+      "candidate_fact_suffixes": [
+        "lifepod.visible"
+      ],
+      "must_not_infer": [],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    },
+    {
+      "at_seconds": 625,
+      "kind": "point_sample",
+      "observation": "Inside pod; fish held.",
+      "candidate_fact_suffixes": [
+        "fish.visible"
+      ],
+      "must_not_infer": [
+        "held_fish_species",
+        "crafted_tools"
+      ],
+      "event_onset_seconds": null,
+      "annotation_status": "research_note_requires_review"
+    }
+  ],
+  "not_confirmed_in_samples": [
+    "Scanner crafted or used",
+    "Any completed organism or fragment scan",
+    "Filtered Water crafted",
+    "Repair Tool crafted",
+    "Radio repaired or message heard",
+    "Seaglide blueprint completed or Seaglide crafted"
+  ],
+  "limits": [
+    "No absence claim for unsampled intervals.",
+    "Point samples can find candidate windows, not validate precision/recall.",
+    "No frames or later annotations may be fed into an earlier gameplay decision."
+  ]
+}

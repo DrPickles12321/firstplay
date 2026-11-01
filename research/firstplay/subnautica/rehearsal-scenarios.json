@@ -1,0 +1,322 @@
+{
+  "id": "subnautica-part1-chat-rehearsal",
+  "version": 1,
+  "gameId": "subnautica",
+  "video": {
+    "id": "hh5dckAV5Pg",
+    "url": "https://www.youtube.com/watch?v=hh5dckAV5Pg",
+    "title": "Subnautica Free To Use Gameplay Footage [Part 1]",
+    "creator": "Royalty Free Game Clips",
+    "duration": 632.641
+  },
+  "provenance": "All chat messages and usernames are authored synthetic examples, not real Twitch messages. Times are illustrative scheduling cues near previously inspected point samples, not automatic recognition or validated first reveals. Draft outcomes require independent review.",
+  "automaticRecognition": false,
+  "chapters": [
+    {
+      "id": "fish",
+      "title": "A new fish name",
+      "start": 250,
+      "end": 294,
+      "purpose": "The same named reaction before and after confirmation; knowing a fish does not permit instructions.",
+      "checkpoint": {
+        "at": 270,
+        "eventIds": [
+          "sn1.event.boomerang_inventory"
+        ],
+        "note": "Previously inspected point sample, not a validated first-reveal time. Watch and confirm the evidence yourself."
+      },
+      "cues": [
+        {
+          "id": "before",
+          "at": 251,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "hey chat, first time watching this game",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "That Boomerang looks funny.",
+              "draftExpected": "review"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "Catch a bladderfish and make water.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "I need to water my houseplants lol",
+              "draftExpected": "allow"
+            }
+          ]
+        },
+        {
+          "id": "after",
+          "at": 274,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "That Boomerang looks funny.",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "Cook the Boomerang.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "Ese pez se ve bonito.",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "Those purple fish might solve your thirst problem.",
+              "draftExpected": "reject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "title": "Fire in the lifepod",
+      "start": 40,
+      "end": 79,
+      "purpose": "Observed tool use can permit a reaction while future guidance stays hidden.",
+      "checkpoint": {
+        "at": 55,
+        "eventIds": [
+          "sn1.event.extinguisher_use"
+        ],
+        "note": "Previously inspected point sample, not a validated first-reveal time. Watch and confirm the evidence yourself."
+      },
+      "cues": [
+        {
+          "id": "before",
+          "at": 41,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "hello everyone, settling in with snacks",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "The extinguisher spray looked ridiculous.",
+              "draftExpected": "review"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "Use the extinguisher on that fire.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "I burned my pizza earlier too",
+              "draftExpected": "allow"
+            }
+          ]
+        },
+        {
+          "id": "after",
+          "at": 59,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "The extinguisher spray looked ridiculous.",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "Repair the radio next.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "我晚饭吃了意面。",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "Remember to watch your oxygen when you go outside.",
+              "draftExpected": "reject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surface",
+      "title": "The first surface view",
+      "start": 110,
+      "end": 144,
+      "purpose": "A visible ship does not establish its name, hazards or future events.",
+      "checkpoint": {
+        "at": 120,
+        "eventIds": [
+          "sn1.event.ocean_view",
+          "sn1.event.ship_view"
+        ],
+        "note": "Previously inspected point sample, not a validated first-reveal time. Watch and confirm the evidence yourself."
+      },
+      "cues": [
+        {
+          "id": "before",
+          "at": 111,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "this is such a cozy stream",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "That ship looks enormous.",
+              "draftExpected": "review"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "There is a huge creature behind that ship.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "My friend works on a cargo ship",
+              "draftExpected": "allow"
+            }
+          ]
+        },
+        {
+          "id": "after",
+          "at": 124,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "That ship looks enormous.",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "The ship is called the Aurora.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "That ship is going to explode later.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "GG that was funny",
+              "draftExpected": "allow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pda",
+      "title": "Names in the PDA",
+      "start": 292,
+      "end": 324,
+      "purpose": "A recipe shown on screen is different from owning, crafting or finding its ingredients.",
+      "checkpoint": {
+        "at": 300,
+        "eventIds": [
+          "sn1.event.flare_recipe_view",
+          "sn1.event.seaglide_list"
+        ],
+        "note": "Previously inspected point sample, not a validated first-reveal time. Watch and confirm the evidence yourself."
+      },
+      "cues": [
+        {
+          "id": "before",
+          "at": 293,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "how was everyone’s day?",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "The Seaglide has a funny name.",
+              "draftExpected": "review"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "Scan two fragments to unlock the Seaglide.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "My scanner at work is broken again",
+              "draftExpected": "allow"
+            }
+          ]
+        },
+        {
+          "id": "after",
+          "at": 304,
+          "messages": [
+            {
+              "id": "m01",
+              "name": "kelpclub",
+              "text": "The flare recipe you read used cave sulfur.",
+              "draftExpected": "allow"
+            },
+            {
+              "id": "m02",
+              "name": "cozydiver",
+              "text": "Nice scanner craft!",
+              "draftExpected": "review"
+            },
+            {
+              "id": "m03",
+              "name": "snackbreak",
+              "text": "Go back and pick up the cave sulfur.",
+              "draftExpected": "reject"
+            },
+            {
+              "id": "m04",
+              "name": "reefreader",
+              "text": "I love this playlist",
+              "draftExpected": "allow"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1265 @@
+{
+  "schema_version": "0.1",
+  "id": "smo.cap-cascade",
+  "version": "0.2-draft",
+  "researched_at": "2026-10-30",
+  "status": "research_draft_not_runtime_validated",
+  "game": "Super Mario Odyssey",
+  "language": "en",
+  "game_version": "not_yet_recorded",
+  "review": {
+    "reviewed_by": null,
+    "recording_check": null,
+    "verified_at": null
+  },
+  "scope": {
+    "start": "fresh-save Cap opening",
+    "end": "initial Cascade departure",
+    "moon_entries": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "exclusions": [
+      "remaining optional Moon routes",
+      "Cap revisits",
+      "Paragoomba on a later visit",
+      "later kingdoms",
+      "speedrun/glitch routes",
+      "complete movement guide",
+      "non-English recognition"
+    ],
+    "unsupported_content": "Classify explicit hints/future claims semantically; unresolved game-related claims go to review, not automatic approval."
+  },
+  "initial_known_fact_ids": [],
+  "initial_known_relation_ids": [],
+  "invariants": [
+    "Source truth does not establish player knowledge.",
+    "Availability does not establish player knowledge.",
+    "Seen is not captured.",
+    "Collection does not imply every solution technique.",
+    "Keywords are candidate references, not verdicts.",
+    "Chat claims never confirm discoveries.",
+    "An automatic event is disabled until detector-specific validation."
+  ],
+  "sources": [
+    {
+      "id": "cap",
+      "title": "Cap opening mission",
+      "url": "https://www.mariowiki.com/Cappy_of_the_Cap_Kingdom",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "capture",
+      "title": "Capture mechanics",
+      "url": "https://www.mariowiki.com/Capture",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "capture_list",
+      "title": "Capture list",
+      "url": "https://smo.wiki/Capture",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "first_moon",
+      "title": "First Moon mission",
+      "url": "https://www.mariowiki.com/Our_First_Power_Moon",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "falls",
+      "title": "Falls story mission",
+      "url": "https://www.mariowiki.com/Multi_Moon_Atop_the_Falls",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "topper",
+      "title": "Topper encounter",
+      "url": "https://www.mariowiki.com/Topper",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "broode",
+      "title": "Madame Broode encounter",
+      "url": "https://www.mariowiki.com/Madame_Broode",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "moons",
+      "title": "Cascade Moon availability",
+      "url": "https://www.mariowiki.com/List_of_Power_Moons_in_the_Cascade_Kingdom",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "moon_routes",
+      "title": "Cascade routes and reward values",
+      "url": "https://www.powerpyx.com/super-mario-odyssey-power-moon-locations-cascade-kingdom/",
+      "accessed_at": "2026-10-30"
+    },
+    {
+      "id": "progress",
+      "title": "Cascade progression",
+      "url": "https://smo.wiki/Cascade_Kingdom",
+      "accessed_at": "2026-10-30"
+    }
+  ],
+  "facts": [
+    {
+      "id": "cap.location",
+      "kind": "location",
+      "statement": "The opening takes place in Cap Kingdom.",
+      "aliases": [
+        "Cap Kingdom",
+        "Bonneton",
+        "hat kingdom"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "Kingdom arrival is observed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cappy.met",
+      "kind": "entity",
+      "statement": "Mario meets Cappy in Cap.",
+      "aliases": [
+        "Cappy",
+        "talking hat"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "Introduction is actually shown.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "tiara.introduced",
+      "kind": "entity",
+      "statement": "Cappy explains that his sister Tiara was kidnapped.",
+      "aliases": [
+        "Tiara",
+        "Cappy sister"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "Relevant dialogue is shown.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "hat.throw",
+      "kind": "mechanic",
+      "statement": "Cappy enables hat interactions.",
+      "aliases": [
+        "throw hat",
+        "cap throw",
+        "hat toss"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "Hat interaction is demonstrated.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cap.bridge",
+      "kind": "solution",
+      "statement": "A Cappy-operated switch raises the tower bridge.",
+      "aliases": [
+        "switch",
+        "lever",
+        "tower bridge"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "This specific interaction is demonstrated.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "frog.seen",
+      "kind": "entity",
+      "statement": "Frogs appear inside Top-Hat Tower.",
+      "aliases": [
+        "frog",
+        "froggy"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "A frog is visibly encountered; do not imply capture.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "frog.capture",
+      "kind": "mechanic",
+      "statement": "Mario can capture a frog.",
+      "aliases": [
+        "capture frog",
+        "frog Mario",
+        "become frog"
+      ],
+      "source_ids": [
+        "capture"
+      ],
+      "confirm_when": "Successful frog capture is confirmed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "frog.high_jump",
+      "kind": "mechanic",
+      "statement": "Captured frogs can reach high platforms.",
+      "aliases": [
+        "frog jump",
+        "high jump"
+      ],
+      "source_ids": [
+        "capture"
+      ],
+      "confirm_when": "The high-jump capability is demonstrated or explicitly learned.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cap.life_up_secret",
+      "kind": "secret",
+      "statement": "A hidden Life-Up Heart is near the tower exit.",
+      "aliases": [
+        "Life-Up Heart",
+        "tower heart",
+        "hidden heart"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "The hidden item is actually discovered.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "topper.encounter",
+      "kind": "encounter",
+      "statement": "Topper is fought in Cap.",
+      "aliases": [
+        "Topper",
+        "green rabbit",
+        "hat rabbit"
+      ],
+      "source_ids": [
+        "topper"
+      ],
+      "confirm_when": "Encounter introduction is shown.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "topper.hats",
+      "kind": "solution",
+      "statement": "Removing Topper hats exposes an attack opportunity.",
+      "aliases": [
+        "knock hats off",
+        "Topper hats"
+      ],
+      "source_ids": [
+        "topper"
+      ],
+      "confirm_when": "Player demonstrates or explicitly learns this tactic.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "topper.head_attack",
+      "kind": "solution",
+      "statement": "Topper can be attacked on his exposed head.",
+      "aliases": [
+        "stomp Topper",
+        "jump on rabbit"
+      ],
+      "source_ids": [
+        "topper"
+      ],
+      "confirm_when": "This tactic is demonstrated or explicitly learned.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "topper.defeated",
+      "kind": "completion",
+      "statement": "The opening Topper encounter can be completed.",
+      "aliases": [
+        "Topper beaten",
+        "first boss down"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "Victory is confirmed; no unobserved tactics are implied.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "spark.seen",
+      "kind": "entity",
+      "statement": "A spark pylon appears after Topper.",
+      "aliases": [
+        "spark pylon",
+        "electric pole"
+      ],
+      "source_ids": [
+        "cap"
+      ],
+      "confirm_when": "Pylon is observed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "spark.capture",
+      "kind": "mechanic",
+      "statement": "Capturing a spark pylon enables power-line travel.",
+      "aliases": [
+        "electric wire",
+        "power line",
+        "electricity travel"
+      ],
+      "source_ids": [
+        "capture"
+      ],
+      "confirm_when": "Successful power-line capture is confirmed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.location",
+      "kind": "location",
+      "statement": "Cascade Kingdom is also called Fossil Falls.",
+      "aliases": [
+        "Cascade Kingdom",
+        "Fossil Falls",
+        "waterfall kingdom"
+      ],
+      "source_ids": [
+        "progress"
+      ],
+      "confirm_when": "Arrival is shown.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "power_moon.introduced",
+      "kind": "collectible",
+      "statement": "Power Moons are introduced in Cascade.",
+      "aliases": [
+        "Power Moon",
+        "moon"
+      ],
+      "source_ids": [
+        "first_moon"
+      ],
+      "confirm_when": "Collectible introduction is shown.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "chomp.seen",
+      "kind": "entity",
+      "statement": "Chain Chomps appear on the Cascade route.",
+      "aliases": [
+        "Chain Chomp",
+        "chomp",
+        "doggo",
+        "chain dog"
+      ],
+      "source_ids": [
+        "first_moon"
+      ],
+      "confirm_when": "Creature is encountered; seeing is not capturing.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "chomp.capture",
+      "kind": "mechanic",
+      "statement": "Mario can capture a Chain Chomp.",
+      "aliases": [
+        "capture chomp",
+        "control chomp"
+      ],
+      "source_ids": [
+        "capture"
+      ],
+      "confirm_when": "Successful capture is confirmed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "chomp.break_rocks",
+      "kind": "mechanic",
+      "statement": "A captured Chain Chomp can smash stone obstructions.",
+      "aliases": [
+        "break rocks",
+        "slingshot chomp"
+      ],
+      "source_ids": [
+        "first_moon"
+      ],
+      "confirm_when": "Rock-breaking interaction is demonstrated.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.first_moon_solution",
+      "kind": "solution",
+      "statement": "The opening Moon is revealed by breaking its glowing rock.",
+      "aliases": [
+        "first moon rock",
+        "glowing wall"
+      ],
+      "source_ids": [
+        "first_moon"
+      ],
+      "confirm_when": "This specific solution is observed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.first_bridge",
+      "kind": "world_change",
+      "statement": "Collecting the first Moon opens access toward the Odyssey.",
+      "aliases": [
+        "fallen pillar",
+        "river bridge"
+      ],
+      "source_ids": [
+        "first_moon"
+      ],
+      "confirm_when": "The world change is observed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "odyssey.seen",
+      "kind": "entity",
+      "statement": "The Odyssey is the airship found on the Cascade route.",
+      "aliases": [
+        "Odyssey",
+        "airship",
+        "ship"
+      ],
+      "source_ids": [
+        "falls"
+      ],
+      "confirm_when": "Airship is encountered.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "big_chomp.seen",
+      "kind": "entity",
+      "statement": "A Big Chain Chomp is encountered beyond the opening Moon.",
+      "aliases": [
+        "Big Chain Chomp",
+        "big chomp",
+        "giant chomp"
+      ],
+      "source_ids": [
+        "falls"
+      ],
+      "confirm_when": "This creature is observed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "big_chomp.capture",
+      "kind": "mechanic",
+      "statement": "Mario can capture Big Chain Chomps.",
+      "aliases": [
+        "capture big chomp",
+        "big chomp capture"
+      ],
+      "source_ids": [
+        "capture_list"
+      ],
+      "confirm_when": "That capture type is explicitly confirmed; normal Chomp capture is insufficient.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "rex.seen",
+      "kind": "entity",
+      "statement": "A T-Rex is present on the Cascade route.",
+      "aliases": [
+        "T-Rex",
+        "trex",
+        "dinosaur",
+        "dino"
+      ],
+      "source_ids": [
+        "falls"
+      ],
+      "confirm_when": "Dinosaur is seen; do not imply capture.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "rex.capture",
+      "kind": "mechanic",
+      "statement": "Mario can capture a T-Rex.",
+      "aliases": [
+        "capture dinosaur",
+        "control dino"
+      ],
+      "source_ids": [
+        "capture_list"
+      ],
+      "confirm_when": "Successful T-Rex capture is confirmed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "rex.break_rocks",
+      "kind": "mechanic",
+      "statement": "The T-Rex is an alternative way to break route barriers.",
+      "aliases": [
+        "dinosaur rocks",
+        "dino wall"
+      ],
+      "source_ids": [
+        "falls"
+      ],
+      "confirm_when": "This capability is demonstrated or explicitly learned.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.2d_seen",
+      "kind": "mechanic",
+      "statement": "A pipe leads into a side-scrolling section on the stone wall.",
+      "aliases": [
+        "2D section",
+        "8-bit",
+        "pixel Mario",
+        "wall pipe"
+      ],
+      "source_ids": [
+        "falls"
+      ],
+      "confirm_when": "The pipe transition or section is observed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.2d_access",
+      "kind": "solution",
+      "statement": "Breaking the Great Barrier reveals that pipe.",
+      "aliases": [
+        "Great Barrier",
+        "pipe behind wall"
+      ],
+      "source_ids": [
+        "falls"
+      ],
+      "confirm_when": "This specific connection is demonstrated.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "broode.encounter",
+      "kind": "encounter",
+      "statement": "Madame Broode is the Cascade story boss.",
+      "aliases": [
+        "Madame Broode",
+        "Madam Broode",
+        "big rabbit"
+      ],
+      "source_ids": [
+        "broode"
+      ],
+      "confirm_when": "Encounter introduction is shown.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "broode.chomp_seen",
+      "kind": "entity",
+      "statement": "Her golden pet is Chain Chompikins.",
+      "aliases": [
+        "Chain Chompikins",
+        "gold chomp",
+        "golden chomp"
+      ],
+      "source_ids": [
+        "broode"
+      ],
+      "confirm_when": "Pet is encountered; no capture permission is implied.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "broode.chomp_capture",
+      "kind": "mechanic",
+      "statement": "Her Chomp can be captured after its hat is removed.",
+      "aliases": [
+        "Broode Chomp capture",
+        "gold chomp hat"
+      ],
+      "source_ids": [
+        "broode"
+      ],
+      "confirm_when": "This capture is demonstrated or explicitly learned.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "broode.return_attack",
+      "kind": "solution",
+      "statement": "Releasing the stretched captured Chomp can hit Broode.",
+      "aliases": [
+        "send chomp back",
+        "hit Broode"
+      ],
+      "source_ids": [
+        "broode"
+      ],
+      "confirm_when": "This attack is demonstrated or explicitly learned.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "broode.defeated",
+      "kind": "completion",
+      "statement": "Defeating Broode awards the story Multi Moon.",
+      "aliases": [
+        "Broode beaten",
+        "falls boss down"
+      ],
+      "source_ids": [
+        "falls"
+      ],
+      "confirm_when": "Victory/reward is confirmed; do not infer all tactics.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "multi_moon.value",
+      "kind": "mechanic",
+      "statement": "A Multi Moon contributes three Moon units.",
+      "aliases": [
+        "Multi Moon",
+        "triple moon",
+        "three moons"
+      ],
+      "source_ids": [
+        "moon_routes"
+      ],
+      "confirm_when": "Reward value is displayed or explicitly learned.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "departure.requirement",
+      "kind": "progress",
+      "statement": "Five Moon units are needed to leave Cascade.",
+      "aliases": [
+        "five moons",
+        "fuel ship",
+        "leave Cascade"
+      ],
+      "source_ids": [
+        "progress"
+      ],
+      "confirm_when": "The requirement is displayed or explicitly learned.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_01.collected",
+      "kind": "moon_collection",
+      "statement": "The selected Moon entry is Our First Power Moon.",
+      "aliases": [
+        "Our First Power Moon",
+        "first moon"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "Collection of this exact Moon is confirmed, not merely its menu entry.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_02.collected",
+      "kind": "moon_collection",
+      "statement": "The selected Moon entry is Multi Moon Atop the Falls.",
+      "aliases": [
+        "Multi Moon Atop the Falls",
+        "boss moon"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "Collection of this exact Moon is confirmed, not merely its menu entry.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_03.collected",
+      "kind": "moon_collection",
+      "statement": "The selected Moon entry is Chomp Through the Rocks.",
+      "aliases": [
+        "Chomp Through the Rocks",
+        "chomp secret"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "Collection of this exact Moon is confirmed, not merely its menu entry.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_04.collected",
+      "kind": "moon_collection",
+      "statement": "The selected Moon entry is Behind the Waterfall.",
+      "aliases": [
+        "Behind the Waterfall",
+        "waterfall secret"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "Collection of this exact Moon is confirmed, not merely its menu entry.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_05.collected",
+      "kind": "moon_collection",
+      "statement": "The selected Moon entry is On Top of the Rubble.",
+      "aliases": [
+        "On Top of the Rubble",
+        "rubble moon"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "Collection of this exact Moon is confirmed, not merely its menu entry.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_06.collected",
+      "kind": "moon_collection",
+      "statement": "The selected Moon entry is Treasure of the Waterfall Basin.",
+      "aliases": [
+        "Treasure of the Waterfall Basin",
+        "water treasure"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "Collection of this exact Moon is confirmed, not merely its menu entry.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_03.location",
+      "kind": "secret",
+      "statement": "Another Moon is behind a Chomp-breakable rock wall.",
+      "aliases": [
+        "Chomp Through the Rocks location"
+      ],
+      "source_ids": [
+        "moon_routes"
+      ],
+      "confirm_when": "That particular secret is found or explicitly revealed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_04.location",
+      "kind": "secret",
+      "statement": "A hidden Moon is reached from the waterfall 2D section.",
+      "aliases": [
+        "Behind the Waterfall location"
+      ],
+      "source_ids": [
+        "moon_routes"
+      ],
+      "confirm_when": "This secret route is found or explicitly revealed.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_05.location",
+      "kind": "secret",
+      "statement": "A Moon appears on rubble near the opening area.",
+      "aliases": [
+        "On Top of the Rubble location"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "That Moon location is discovered.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    },
+    {
+      "id": "cascade.moon_06.location",
+      "kind": "secret",
+      "statement": "A Moon is hidden in a waterside alcove below the original ship site.",
+      "aliases": [
+        "Treasure of the Waterfall Basin location"
+      ],
+      "source_ids": [
+        "moons"
+      ],
+      "confirm_when": "That Moon location is discovered.",
+      "verification_status": "source_checked_gameplay_review_pending"
+    }
+  ],
+  "relations": [
+    {
+      "id": "solution.frog_to_high_platform",
+      "fact_ids": [
+        "frog.capture",
+        "frog.high_jump"
+      ],
+      "meaning": "Frog capture helps reach tall ledges.",
+      "source_ids": [
+        "capture"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "solution.opening_rock",
+      "fact_ids": [
+        "chomp.capture",
+        "chomp.break_rocks",
+        "cascade.first_moon_solution"
+      ],
+      "meaning": "Use the opening Chomp on the opening Moon obstruction.",
+      "source_ids": [
+        "first_moon"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "solution.topper_exposed_head",
+      "fact_ids": [
+        "topper.hats",
+        "topper.head_attack"
+      ],
+      "meaning": "Hat removal enables the head attack.",
+      "source_ids": [
+        "topper"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "solution.wall_to_2d",
+      "fact_ids": [
+        "cascade.2d_seen",
+        "cascade.2d_access"
+      ],
+      "meaning": "Breaking the particular barrier opens the 2D route.",
+      "source_ids": [
+        "falls"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "solution.rex_route_barrier",
+      "fact_ids": [
+        "rex.capture",
+        "rex.break_rocks"
+      ],
+      "meaning": "The dinosaur can clear route barriers.",
+      "source_ids": [
+        "falls"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "solution.broode_chomp",
+      "fact_ids": [
+        "broode.chomp_capture",
+        "broode.return_attack"
+      ],
+      "meaning": "The captured pet is used against Broode.",
+      "source_ids": [
+        "broode"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "solution.optional_chomp_moon",
+      "fact_ids": [
+        "chomp.break_rocks",
+        "cascade.moon_03.location"
+      ],
+      "meaning": "The other Chomp wall hides this optional Moon.",
+      "source_ids": [
+        "moon_routes"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "solution.waterfall_secret",
+      "fact_ids": [
+        "cascade.2d_seen",
+        "cascade.moon_04.location"
+      ],
+      "meaning": "The 2D section contains the waterfall secret route.",
+      "source_ids": [
+        "moon_routes"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    },
+    {
+      "id": "progress.departure_fuel",
+      "fact_ids": [
+        "multi_moon.value",
+        "departure.requirement"
+      ],
+      "meaning": "Count Moon units, not just collected entry count.",
+      "source_ids": [
+        "progress"
+      ],
+      "confirmation": "Confirm this relationship separately; component facts never imply it automatically."
+    }
+  ],
+  "moons": [
+    {
+      "number": 1,
+      "name": "Our First Power Moon",
+      "knowledge_fact_id": "cascade.moon_01.collected",
+      "availability_note": "Available at the opening objective.",
+      "availability_is_not_player_knowledge": true,
+      "source_ids": [
+        "moons"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Multi Moon Atop the Falls",
+      "knowledge_fact_id": "cascade.moon_02.collected",
+      "availability_note": "Available after the first Moon; reward for Broode.",
+      "availability_is_not_player_knowledge": true,
+      "source_ids": [
+        "moons"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Chomp Through the Rocks",
+      "knowledge_fact_id": "cascade.moon_03.collected",
+      "availability_note": "Available after the first Moon.",
+      "availability_is_not_player_knowledge": true,
+      "source_ids": [
+        "moons"
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Behind the Waterfall",
+      "knowledge_fact_id": "cascade.moon_04.collected",
+      "availability_note": "Available after the first Moon.",
+      "availability_is_not_player_knowledge": true,
+      "source_ids": [
+        "moons"
+      ]
+    },
+    {
+      "number": 5,
+      "name": "On Top of the Rubble",
+      "knowledge_fact_id": "cascade.moon_05.collected",
+      "availability_note": "Available after the Multi Moon.",
+      "availability_is_not_player_knowledge": true,
+      "source_ids": [
+        "moons"
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Treasure of the Waterfall Basin",
+      "knowledge_fact_id": "cascade.moon_06.collected",
+      "availability_note": "Available after the Multi Moon.",
+      "availability_is_not_player_knowledge": true,
+      "source_ids": [
+        "moons"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "confirm_cappy",
+      "confirms_fact_ids": [
+        "cappy.met"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_frog_seen",
+      "confirms_fact_ids": [
+        "frog.seen"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_frog_capture",
+      "confirms_fact_ids": [
+        "frog.capture"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": true,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_frog_jump",
+      "confirms_fact_ids": [
+        "frog.high_jump"
+      ],
+      "confirms_relation_ids": [
+        "solution.frog_to_high_platform"
+      ],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_topper_encounter",
+      "confirms_fact_ids": [
+        "topper.encounter"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_topper_victory",
+      "confirms_fact_ids": [
+        "topper.defeated"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_spark_capture",
+      "confirms_fact_ids": [
+        "spark.capture"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_cascade_arrival",
+      "confirms_fact_ids": [
+        "cascade.location"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_chomp_capture",
+      "confirms_fact_ids": [
+        "chomp.capture"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_opening_rock_solution",
+      "confirms_fact_ids": [
+        "chomp.break_rocks",
+        "cascade.first_moon_solution"
+      ],
+      "confirms_relation_ids": [
+        "solution.opening_rock"
+      ],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_rex_seen",
+      "confirms_fact_ids": [
+        "rex.seen"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_rex_capture",
+      "confirms_fact_ids": [
+        "rex.capture"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_2d_section",
+      "confirms_fact_ids": [
+        "cascade.2d_seen"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_broode_encounter",
+      "confirms_fact_ids": [
+        "broode.encounter"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_broode_victory",
+      "confirms_fact_ids": [
+        "broode.defeated"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_moon_01",
+      "confirms_fact_ids": [
+        "cascade.moon_01.collected"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_moon_02",
+      "confirms_fact_ids": [
+        "cascade.moon_02.collected"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_moon_03",
+      "confirms_fact_ids": [
+        "cascade.moon_03.collected"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_moon_04",
+      "confirms_fact_ids": [
+        "cascade.moon_04.collected"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_moon_05",
+      "confirms_fact_ids": [
+        "cascade.moon_05.collected"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    },
+    {
+      "id": "confirm_moon_06",
+      "confirms_fact_ids": [
+        "cascade.moon_06.collected"
+      ],
+      "confirms_relation_ids": [],
+      "automatic_candidate": false,
+      "automatic_enabled": false,
+      "authority": "authorized moderator or separately validated positive-evidence detector",
+      "evidence_required": true
+    }
+  ],
+  "detection_research": [
+    {
+      "id": "frog_capture",
+      "target_event": "confirm_frog_capture",
+      "proposed_evidence": "Consistent captured-frog appearance across gameplay frames; record timestamps and hard negatives.",
+      "status": "unvalidated",
+      "uncertainty_action": "suggest confirmation to moderator",
+      "never_infer": [
+        "all frog moves",
+        "all frog-associated secrets"
+      ]
+    },
+    {
+      "id": "moon_collection_banner",
+      "target_events": [
+        "confirm_moon_01",
+        "confirm_moon_02",
+        "confirm_moon_03",
+        "confirm_moon_04",
+        "confirm_moon_05",
+        "confirm_moon_06"
+      ],
+      "proposed_evidence": "Collection animation plus matching English title across frames; a map/list entry is insufficient.",
+      "status": "unvalidated",
+      "uncertainty_action": "suggest confirmation to moderator",
+      "never_infer": [
+        "the route taken",
+        "all associated solution relations"
+      ]
+    },
+    {
+      "id": "capture_list_observation",
+      "proposed_evidence": "If the player naturally opens the in-game list, confirmed populated entries can suggest historical captures.",
+      "status": "unvalidated_optional_no_external_game_api_established",
+      "uncertainty_action": "suggest confirmation to moderator",
+      "never_infer": [
+        "capture occurred during current challenge",
+        "all movement capabilities"
+      ]
+    }
+  ],
+  "reference_identity_aliases": [
+    {
+      "left": "smo.moon.cascade.001",
+      "right": "cascade.moon_01.collected"
+    },
+    {
+      "left": "smo.moon.cascade.002",
+      "right": "cascade.moon_02.collected"
+    },
+    {
+      "left": "smo.moon.cascade.003",
+      "right": "cascade.moon_03.collected"
+    },
+    {
+      "left": "smo.moon.cascade.004",
+      "right": "cascade.moon_04.collected"
+    },
+    {
+      "left": "smo.moon.cascade.005",
+      "right": "cascade.moon_05.collected"
+    },
+    {
+      "left": "smo.moon.cascade.006",
+      "right": "cascade.moon_06.collected"
+    }
+  ],
+  "observer_guidance": "Frog capture: confirm the controlled captured form across gameplay frames, not just a frog in the world. Moon collection: require an actual collection animation/banner with an exact supported English title; a map/list entry is insufficient. These are unvalidated candidate cues, not automatic proof."
+}

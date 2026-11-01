@@ -1,0 +1,181 @@
+{
+  "researched_at": "2026-10-31T00:40:20.637480+00:00",
+  "sources": [
+    {
+      "id": "video",
+      "title": "Subnautica Free To Use Gameplay Footage [Part 1]",
+      "url": "https://www.youtube.com/watch?v=hh5dckAV5Pg",
+      "kind": "creator_recording",
+      "verification": "Opened in Chrome; duration, description and selected decoded frames inspected. Not continuously watched or downloaded.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "publisher",
+      "title": "Unknown Worlds Video Policy",
+      "url": "https://unknownworlds.com/en/pages/video-policy",
+      "kind": "publisher_primary",
+      "verification": "Policy text read; ordinary video uses allowed subject to conditions, with a separate restriction on licensing footage.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "new_guideline",
+      "title": "Subnautica 2 Fan Content Creation Guidelines (22 May 2026)",
+      "url": "https://subnautica.com/en/policy/content-guidelines",
+      "kind": "publisher_primary",
+      "verification": "Read after delayed Chrome loading. Contains sequel AI-reference restrictions; applicability to original-game footage remains unresolved.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "rules",
+      "title": "Codex x TwitchCon Hackathon rules",
+      "url": "https://twitchcon-codex.devpost.com/rules",
+      "kind": "organizer_primary",
+      "verification": "Requirements, deadline, video, repository and third-party material provisions checked.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "steam",
+      "title": "Original Subnautica Steam listing",
+      "url": "https://store.steampowered.com/app/264710/Subnautica/",
+      "kind": "publisher_primary",
+      "verification": "Original single-player game, not Below Zero or Subnautica 2; description checked. No popularity or price claim used.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "lifepod",
+      "title": "Lifepod 5 reference",
+      "url": "https://subnautica.fandom.com/wiki/Lifepod_5?page=1&title=Lifepod_5",
+      "kind": "community_reference",
+      "verification": "Intro, separate repairs and randomized initial location; browser-visible footage is preferred for actual player evidence.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "scanner",
+      "title": "Original-game Scanner item reference",
+      "url": "https://wikily.gg/subnautica/items/scanner",
+      "kind": "community_reference",
+      "verification": "Blueprint, recipe and general scanner functions checked. Not footage evidence.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "repair",
+      "title": "Original-game Repair Tool item reference",
+      "url": "https://wikily.gg/subnautica/items/welder",
+      "kind": "community_reference",
+      "verification": "Original-game ingredient list checked; distinguish from sequel recipes.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "water",
+      "title": "Filtered Water reference",
+      "url": "https://wikily.gg/subnautica/items/filteredwater",
+      "kind": "community_reference",
+      "verification": "Bladderfish to filtered water; no assumption that this occurs in Part 1.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "bladderfish",
+      "title": "Bladderfish reference",
+      "url": "https://subnautica.fandom.com/wiki/Bladderfish_%28Subnautica%29",
+      "kind": "community_reference",
+      "verification": "Water-use relationship checked through indexed page text; species not confirmed from the inspected footage samples.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "blueprints",
+      "title": "Original-game Blueprints reference",
+      "url": "https://subnautica.fandom.com/wiki/Blueprints_%28Subnautica%29",
+      "kind": "community_reference",
+      "verification": "Discovery/unlock distinguished from item possession.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "radio",
+      "title": "Radio reference",
+      "url": "https://subnautica.fandom.com/wiki/Radio",
+      "kind": "community_reference",
+      "verification": "Radio repair distinct from hearing a message. Later dialogue was not copied into the pack.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "seaglide",
+      "title": "Original-game Seaglide reference",
+      "url": "https://subnautica.fandom.com/wiki/Seaglide_%28Subnautica%29",
+      "kind": "community_reference",
+      "verification": "Two fragments needed; partial progress is not unlock or crafting.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "peeper",
+      "title": "Peeper reference",
+      "url": "https://subnautica.fandom.com/wiki/Peeper",
+      "kind": "community_reference",
+      "verification": "Identity/edibility only used; late-story lore excluded.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "getting_started",
+      "title": "Getting Started community reference",
+      "url": "https://subnautica.fandom.com/wiki/Getting_Started",
+      "kind": "community_reference",
+      "verification": "General opening concepts only; old guide numbers conflict, so numeric nutrition/route advice is not adopted.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "problem",
+      "title": "Streamer describes Subnautica chat spoilers",
+      "url": "https://www.reddit.com/r/Twitch/comments/ldkusy/",
+      "kind": "first_person_anecdote",
+      "verification": "Direct report of unseen names and recipe hints reaching streamer before moderator deletion. Not prevalence statistics.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "automod",
+      "title": "Twitch AutoMod documentation",
+      "url": "https://help.twitch.tv/s/article/how-to-use-automod?language=en_US",
+      "kind": "platform_primary",
+      "verification": "Indexed documentation describes moderation categories and blocked terms; no documented player-discovery ledger was established.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "capture",
+      "title": "MDN getDisplayMedia",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia",
+      "kind": "technical_primary",
+      "verification": "User-gesture and fresh screen-sharing permission requirements.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "canvas",
+      "title": "MDN cross-origin canvas restrictions",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/CORS_enabled_image",
+      "kind": "technical_primary",
+      "verification": "An ordinary cross-origin player embed does not grant readable pixels.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "yt_api",
+      "title": "YouTube IFrame Player API",
+      "url": "https://developers.google.com/youtube/iframe_api_reference",
+      "kind": "technical_primary",
+      "verification": "Playback control/state and clock are available; a frame-extraction API was not established.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "twitch",
+      "title": "Twitch EventSub reference",
+      "url": "https://dev.twitch.tv/docs/eventsub/eventsub-reference/",
+      "kind": "technical_primary",
+      "verification": "Twitch chat events carry messages; they do not establish Subnautica save/discovery state.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "patch",
+      "title": "Original Subnautica 2025 patch",
+      "url": "https://www.unknownworlds.com/en/news/subnautica-2025-patch",
+      "kind": "publisher_primary",
+      "verification": "Platform/input changes exist; recording upload date alone does not establish its game build.",
+      "accessed_at": "2026-10-31"
+    }
+  ]
+}

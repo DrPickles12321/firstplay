@@ -1,0 +1,95 @@
+{
+  "researched_at": "2026-10-30",
+  "total_regional_coins": 1000,
+  "kingdoms_with_regional_coins": 13,
+  "count_source_url": "https://smo.wiki/Regional_coin",
+  "location_maps_source_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/preguntas.html",
+  "coverage_note": "All-game counts and linked maps; local detailed group data exists only for Cascade.",
+  "kingdoms": [
+    {
+      "kingdom": "Cap",
+      "count": 50,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-01-reino-sombrero.html"
+    },
+    {
+      "kingdom": "Cascade",
+      "count": 50,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-02-reino-cataratas.html"
+    },
+    {
+      "kingdom": "Sand",
+      "count": 100,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-03-reino-arenas.html"
+    },
+    {
+      "kingdom": "Lake",
+      "count": 50,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-04-reino-lago.html"
+    },
+    {
+      "kingdom": "Wooded",
+      "count": 100,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-05-reino-arbolado.html"
+    },
+    {
+      "kingdom": "Cloud",
+      "count": 0,
+      "map_url": null
+    },
+    {
+      "kingdom": "Lost",
+      "count": 50,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-07-reino-perdido.html"
+    },
+    {
+      "kingdom": "Metro",
+      "count": 100,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-08-reino-urbano.html"
+    },
+    {
+      "kingdom": "Snow",
+      "count": 50,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-09-reino-hielo.html"
+    },
+    {
+      "kingdom": "Seaside",
+      "count": 100,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-10-reino-ribereno.html"
+    },
+    {
+      "kingdom": "Luncheon",
+      "count": 100,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-11-reino-fogones.html"
+    },
+    {
+      "kingdom": "Ruined",
+      "count": 0,
+      "map_url": null
+    },
+    {
+      "kingdom": "Bowser",
+      "count": 100,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-13-reino-bowser.html"
+    },
+    {
+      "kingdom": "Moon",
+      "count": 50,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-14-reino-luna.html"
+    },
+    {
+      "kingdom": "Mushroom",
+      "count": 100,
+      "map_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-15-reino-champinon.html"
+    },
+    {
+      "kingdom": "Dark Side",
+      "count": 0,
+      "map_url": null
+    },
+    {
+      "kingdom": "Darker Side",
+      "count": 0,
+      "map_url": null
+    }
+  ]
+}

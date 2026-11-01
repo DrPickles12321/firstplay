@@ -1,0 +1,6 @@
+/* Static CSS is installed before Twitch can paint chat, including before storage loads. */
+html:not([data-firstplay-native="show"]):not([data-firstplay-ready="true"]) body { display: none !important; }
+html:not([data-firstplay-native="show"]) :is(#live-page-chat, .right-column, .channel-root__right-column, [data-a-target="right-column-chat-bar"], .chat-room, [data-a-target="chat-scroller"], .chat-line__message, [data-a-target="chat-message"], [data-test-selector="chat-line-message"], [role="log"]) { display: none !important; }
+html:not([data-firstplay-native="show"])[data-firstplay-channel="true"] #root { width: calc(100% - 340px) !important; max-width: calc(100% - 340px) !important; }
+#firstplay-extension-panel { display: block !important; position: fixed !important; top: 50px !important; right: 0 !important; bottom: 0 !important; width: 340px !important; z-index: 2147483000 !important; background: #18181b !important; }
+#firstplay-extension-cover { display: block !important; position: fixed !important; inset: 0 !important; z-index: 2147483647 !important; background: #0e0e10 !important; }

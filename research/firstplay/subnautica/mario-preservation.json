@@ -1,0 +1,16 @@
+{
+  "scope_started_at": "2026-10-31T00:40:20.637480+00:00",
+  "purpose": "Verify no active Mario/runtime source or catalog changed during Subnautica scoping.",
+  "sha256": {
+    "firstplay/server.mjs": "f79254d5fd7ad787ecac888d6d818633127a63ba215d21f52f31cf27f0d2b989",
+    "firstplay/ml/catalog.mjs": "9f7f47f29688730b9e88f8952bbe460933dc8810c6b80f07f7379ce855f9cb14",
+    "firstplay/ml/policy.mjs": "d0cefb06e4d4d7533383f39d6e123f04b706125f75b21188a058c5aa202e3842",
+    "firstplay/ml/observer.mjs": "ba320952da49bb12aee1d735d2263b686fbaa82bebbdee0b4b12fcda4bdd3791",
+    "firstplay/runtime/engine.mjs": "4ce27ea22bc392c0a17d995d9c496f7c0629e20419a52f38d4fc40a03e9591c4",
+    "firstplay/runtime/knowledge.mjs": "81abb1e25d683942d66fdf9aa183d0bfc870e6a1ec561c4d7281e62f7c0498be",
+    "firstplay/public/app.js": "9c5b79bc127ab8a10f98b4fc4bcec27c42f5aa093f8a911c0a119b18cfbe7ab0",
+    "research/firstplay/packs/smo-cap-cascade.v0.2.json": "f0717b9b7d51d75b4be83cdb8b0049d76f894cf90bdda4930adbb3a97ed63749",
+    "research/firstplay/collectibles/smo-moons-all.json": "880d74409b59ac90cf216540d552600ff878c6846d32c1f3e403fbd9c0138afc",
+    "research/firstplay/collectibles/cascade-purple-coins.json": "97fb7776e335befc3ced8ed61bbfa22ed255b33af5b3fa66928e18b7933942ac"
+  }
+}

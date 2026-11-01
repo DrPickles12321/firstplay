@@ -1,0 +1,1369 @@
+{
+  "schema_version": "0.1",
+  "id": "sn1.opening-part1",
+  "version": "0.2-pilot",
+  "researched_at": "2026-10-31",
+  "status": "manual_events_with_experimental_local_text_automation",
+  "game": "Subnautica",
+  "language": "en",
+  "game_version": "original PC; exact source build not established",
+  "review": {
+    "reviewed_by": null,
+    "verified_at": null,
+    "recording_check": "16 decoded point samples; event onset and full intervals unreviewed"
+  },
+  "scope": {
+    "start": "opening lifepod introduction",
+    "end": "end of hh5dckAV5Pg (632.641 seconds)",
+    "source_recording": "sn1.part1.hh5dckAV5Pg",
+    "exclusions": [
+      "Below Zero",
+      "Subnautica 2",
+      "completed scans or crafting unsupported by this recording",
+      "automatic location/biome identity",
+      "story progression beyond the inspected opening",
+      "console/VR/non-English visual recognition",
+      "full-game encyclopedia or route solver"
+    ]
+  },
+  "initial_known_fact_ids": [],
+  "initial_known_relation_ids": [],
+  "invariants": [
+    "World truth is not player knowledge.",
+    "Seeing a name is not acquiring an item.",
+    "An inventory item is not a demonstrated recipe.",
+    "Seeing a fish is not learning its water/food properties.",
+    "A fragment count is not a blueprint unlock.",
+    "A default blueprint existing is not proof the player viewed it.",
+    "No point sample or gold annotation directly changes runtime knowledge.",
+    "Chat and nicknames never confirm discoveries.",
+    "Authored multi-fact events stay manual. Experimental local OCR may add separately allowlisted single text facts after repeated checks; general accuracy remains unvalidated.",
+    "Mario remains a separate unchanged pack and session."
+  ],
+  "facts": [
+    {
+      "id": "sn1.lifepod.visible",
+      "kind": "location",
+      "statement": "The opening escape capsule has a recognizable interior.",
+      "aliases": [
+        "pod",
+        "lifepod",
+        "escape pod"
+      ],
+      "source_ids": [
+        "video",
+        "lifepod"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.lifepod.named",
+      "kind": "identity",
+      "statement": "The starting capsule is Lifepod 5.",
+      "aliases": [
+        "lifepod five",
+        "pod 5"
+      ],
+      "source_ids": [
+        "lifepod"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.fire.visible",
+      "kind": "encounter",
+      "statement": "Fire appears inside the opening lifepod.",
+      "aliases": [
+        "pod fire",
+        "flames"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.extinguisher.visible",
+      "kind": "entity",
+      "statement": "A fire extinguisher is present in the opening lifepod.",
+      "aliases": [
+        "extinguisher",
+        "fire extinguisher"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.extinguisher.use_seen",
+      "kind": "action",
+      "statement": "The extinguisher can emit spray when used.",
+      "aliases": [
+        "spraying",
+        "firefighting"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.pda.visible",
+      "kind": "interface",
+      "statement": "The PDA provides inventory and reference screens.",
+      "aliases": [
+        "pda",
+        "inventory",
+        "blueprint menu"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.oxygen.hud_seen",
+      "kind": "interface",
+      "statement": "The gameplay HUD has an oxygen meter.",
+      "aliases": [
+        "oxygen",
+        "o2",
+        "air meter"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.ocean.visible",
+      "kind": "location",
+      "statement": "An ocean surrounds the lifepod.",
+      "aliases": [
+        "ocean",
+        "water",
+        "shallows"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.ship.visible",
+      "kind": "entity",
+      "statement": "A damaged ship is visible from the surface.",
+      "aliases": [
+        "ship",
+        "wrecked ship"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.aurora.named",
+      "kind": "identity",
+      "statement": "The damaged ship is named Aurora.",
+      "aliases": [
+        "aurora"
+      ],
+      "source_ids": [
+        "steam",
+        "lifepod"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.fish.visible",
+      "kind": "entity",
+      "statement": "Small fish inhabit the surrounding water.",
+      "aliases": [
+        "fish",
+        "little fish"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state",
+      "label": "Small fish seen"
+    },
+    {
+      "id": "sn1.boomerang.named",
+      "kind": "identity",
+      "statement": "Boomerang is the name of a small fish species.",
+      "aliases": [
+        "boomerang",
+        "boomerang fish"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state",
+      "label": "Boomerang identified"
+    },
+    {
+      "id": "sn1.boomerang.possession_seen",
+      "kind": "possession",
+      "statement": "A Boomerang can be held or appear in player inventory.",
+      "aliases": [
+        "caught boomerang",
+        "held boomerang"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state",
+      "label": "Boomerang in player inventory"
+    },
+    {
+      "id": "sn1.boomerang.edibility_visible",
+      "kind": "property",
+      "statement": "The Boomerang tooltip describes an edible fish.",
+      "aliases": [
+        "edible boomerang",
+        "boomerang food"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state",
+      "label": "Boomerang food tooltip inspected"
+    },
+    {
+      "id": "sn1.peeper.named",
+      "kind": "identity",
+      "statement": "Peeper is a distinct small fish species.",
+      "aliases": [
+        "peeper",
+        "big eyed fish"
+      ],
+      "source_ids": [
+        "peeper"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.peeper.possession_seen",
+      "kind": "possession",
+      "statement": "A Peeper can be held or appear in player inventory.",
+      "aliases": [
+        "caught peeper",
+        "held peeper"
+      ],
+      "source_ids": [
+        "peeper"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.bladderfish.named",
+      "kind": "identity",
+      "statement": "Bladderfish is a distinct small fish species.",
+      "aliases": [
+        "bladderfish",
+        "bladder fish"
+      ],
+      "source_ids": [
+        "bladderfish"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.bladderfish.possession_seen",
+      "kind": "possession",
+      "statement": "A Bladderfish can be held or appear in player inventory.",
+      "aliases": [
+        "caught bladderfish"
+      ],
+      "source_ids": [
+        "bladderfish"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.writhing_weed.named",
+      "kind": "identity",
+      "statement": "Writhing Weed is a plant target label.",
+      "aliases": [
+        "writhing weed"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.creepvine.named",
+      "kind": "identity",
+      "statement": "Creepvine is a plant target label.",
+      "aliases": [
+        "creepvine",
+        "creep vine"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.seed_cluster.named",
+      "kind": "identity",
+      "statement": "Creepvine Seed Clusters are distinct from creepvine samples.",
+      "aliases": [
+        "creepvine seed cluster",
+        "yellow seeds"
+      ],
+      "source_ids": [
+        "getting_started"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.fabricator.named",
+      "kind": "entity",
+      "statement": "A Fabricator is the crafting device in the lifepod.",
+      "aliases": [
+        "fabricator",
+        "crafting machine"
+      ],
+      "source_ids": [
+        "lifepod"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.flare.recipe_visible",
+      "kind": "recipe_visibility",
+      "statement": "The PDA can display the selected Flare recipe.",
+      "aliases": [
+        "flare recipe"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.cave_sulfur.named",
+      "kind": "identity",
+      "statement": "Cave sulfur is an ingredient named in the observed Flare tooltip.",
+      "aliases": [
+        "cave sulfur",
+        "cave sulphur"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.scanner.named",
+      "kind": "entity",
+      "statement": "Scanner is an item listed in the opening tool recipes.",
+      "aliases": [
+        "scanner",
+        "scan tool"
+      ],
+      "source_ids": [
+        "video",
+        "scanner"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.scanner.possession_seen",
+      "kind": "possession",
+      "statement": "Possessing a Scanner is distinct from seeing its recipe name.",
+      "aliases": [
+        "crafted scanner",
+        "held scanner"
+      ],
+      "source_ids": [
+        "scanner"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.scanner.scan_completed",
+      "kind": "completion",
+      "statement": "A completed target scan is distinct from aiming the Scanner.",
+      "aliases": [
+        "scan complete",
+        "scanned target"
+      ],
+      "source_ids": [
+        "scanner",
+        "blueprints"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.battery.named",
+      "kind": "identity",
+      "statement": "A Battery is a component in the original-game Scanner recipe.",
+      "aliases": [
+        "battery"
+      ],
+      "source_ids": [
+        "scanner"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.titanium.named",
+      "kind": "identity",
+      "statement": "Titanium is a component in the original-game Scanner recipe.",
+      "aliases": [
+        "titanium"
+      ],
+      "source_ids": [
+        "scanner"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.filtered_water.named",
+      "kind": "entity",
+      "statement": "Filtered Water is a separate crafted water item.",
+      "aliases": [
+        "filtered water",
+        "water bottle"
+      ],
+      "source_ids": [
+        "water"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.filtered_water.crafted",
+      "kind": "completion",
+      "statement": "Fabricating Filtered Water is distinct from seeing its recipe.",
+      "aliases": [
+        "made filtered water"
+      ],
+      "source_ids": [
+        "water"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.silicone_rubber.named",
+      "kind": "identity",
+      "statement": "Silicone Rubber is a material used by the Repair Tool recipe.",
+      "aliases": [
+        "silicone rubber",
+        "silicon rubber"
+      ],
+      "source_ids": [
+        "repair"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.repair_tool.named",
+      "kind": "entity",
+      "statement": "Repair Tool is a tool listed in opening recipes.",
+      "aliases": [
+        "repair tool",
+        "welder"
+      ],
+      "source_ids": [
+        "video",
+        "repair"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.repair_tool.possession_seen",
+      "kind": "possession",
+      "statement": "Possessing a Repair Tool is distinct from seeing its recipe.",
+      "aliases": [
+        "crafted repair tool"
+      ],
+      "source_ids": [
+        "repair"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.radio.named",
+      "kind": "entity",
+      "statement": "The lifepod has a Radio distinct from its other systems.",
+      "aliases": [
+        "radio",
+        "communications relay"
+      ],
+      "source_ids": [
+        "radio",
+        "lifepod"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.radio.repaired",
+      "kind": "completion",
+      "statement": "The Radio has distinct damaged and repaired states.",
+      "aliases": [
+        "radio online",
+        "fixed radio"
+      ],
+      "source_ids": [
+        "radio"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.seaglide.name_visible",
+      "kind": "identity",
+      "statement": "Seaglide is an item name in the PDA list.",
+      "aliases": [
+        "seaglide",
+        "sea glide"
+      ],
+      "source_ids": [
+        "video",
+        "seaglide"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.seaglide.partial_display_seen",
+      "kind": "interface",
+      "statement": "A partial Seaglide fragment counter is distinct from an unlocked blueprint.",
+      "aliases": [
+        "seaglide fragment counter"
+      ],
+      "source_ids": [
+        "video",
+        "seaglide"
+      ],
+      "support_tier": "clip_candidate",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.seaglide.blueprint_unlocked",
+      "kind": "completion",
+      "statement": "A completed Seaglide blueprint is distinct from partial fragment progress.",
+      "aliases": [
+        "seaglide blueprint unlocked"
+      ],
+      "source_ids": [
+        "seaglide"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    },
+    {
+      "id": "sn1.seaglide.possession_seen",
+      "kind": "possession",
+      "statement": "Possessing a Seaglide is distinct from knowing its blueprint.",
+      "aliases": [
+        "crafted seaglide"
+      ],
+      "source_ids": [
+        "seaglide"
+      ],
+      "support_tier": "reference_only",
+      "verification": "authored_research_draft_requires_review",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false,
+      "statement_role": "reference_definition_not_current_player_state"
+    }
+  ],
+  "relations": [
+    {
+      "id": "sn1.rel.extinguisher.fire",
+      "meaning": "Extinguisher spray is used against the lifepod fire.",
+      "fact_ids": [
+        "sn1.extinguisher.use_seen",
+        "sn1.fire.visible"
+      ],
+      "source_ids": [
+        "video",
+        "lifepod"
+      ],
+      "support_tier": "clip_candidate",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true
+    },
+    {
+      "id": "sn1.rel.boomerang.edible",
+      "meaning": "The observed Boomerang can be discussed as edible after tooltip confirmation.",
+      "fact_ids": [
+        "sn1.boomerang.named",
+        "sn1.boomerang.edibility_visible"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true,
+      "label": "Boomerang food property confirmed"
+    },
+    {
+      "id": "sn1.rel.flare.cave_sulfur",
+      "meaning": "The displayed Flare recipe uses Cave sulfur.",
+      "fact_ids": [
+        "sn1.flare.recipe_visible",
+        "sn1.cave_sulfur.named"
+      ],
+      "source_ids": [
+        "video"
+      ],
+      "support_tier": "clip_candidate",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": true
+    },
+    {
+      "id": "sn1.rel.bladderfish.water",
+      "meaning": "A Bladderfish can be fabricated into Filtered Water.",
+      "fact_ids": [
+        "sn1.bladderfish.named",
+        "sn1.filtered_water.named"
+      ],
+      "source_ids": [
+        "water",
+        "bladderfish"
+      ],
+      "support_tier": "reference_only",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false
+    },
+    {
+      "id": "sn1.rel.scanner.recipe",
+      "meaning": "The original-game Scanner uses a Battery and Titanium.",
+      "fact_ids": [
+        "sn1.scanner.named",
+        "sn1.battery.named",
+        "sn1.titanium.named"
+      ],
+      "source_ids": [
+        "scanner"
+      ],
+      "support_tier": "reference_only",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false
+    },
+    {
+      "id": "sn1.rel.repair.recipe",
+      "meaning": "The original-game Repair Tool uses Silicone Rubber, Cave sulfur and Titanium.",
+      "fact_ids": [
+        "sn1.repair_tool.named",
+        "sn1.silicone_rubber.named",
+        "sn1.cave_sulfur.named",
+        "sn1.titanium.named"
+      ],
+      "source_ids": [
+        "repair"
+      ],
+      "support_tier": "reference_only",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false
+    },
+    {
+      "id": "sn1.rel.repair.radio",
+      "meaning": "A Repair Tool can repair the lifepod Radio.",
+      "fact_ids": [
+        "sn1.repair_tool.named",
+        "sn1.radio.named"
+      ],
+      "source_ids": [
+        "radio"
+      ],
+      "support_tier": "reference_only",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false
+    },
+    {
+      "id": "sn1.rel.scanner.blueprints",
+      "meaning": "Scanning enough relevant technology fragments can unlock a blueprint.",
+      "fact_ids": [
+        "sn1.scanner.named",
+        "sn1.scanner.scan_completed"
+      ],
+      "source_ids": [
+        "blueprints",
+        "scanner"
+      ],
+      "support_tier": "reference_only",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false
+    },
+    {
+      "id": "sn1.rel.seaglide.fragment_requirement",
+      "meaning": "The Seaglide blueprint requires two relevant fragments; a partial counter is not unlock.",
+      "fact_ids": [
+        "sn1.seaglide.name_visible",
+        "sn1.seaglide.partial_display_seen",
+        "sn1.seaglide.blueprint_unlocked"
+      ],
+      "source_ids": [
+        "seaglide"
+      ],
+      "support_tier": "reference_only",
+      "initially_known": false,
+      "confirmation_eligible_in_part1": false
+    }
+  ],
+  "events": [
+    {
+      "id": "sn1.event.pod_view",
+      "confirms_fact_ids": [
+        "sn1.lifepod.visible"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        5,
+        240
+      ],
+      "evidence_required": "Visible lifepod interior across distinct frames.",
+      "must_not_infer": "No Lifepod number, repaired state or story outcome.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Lifepod interior seen",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.fire_view",
+      "confirms_fact_ids": [
+        "sn1.fire.visible"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        45
+      ],
+      "evidence_required": "Positive flames within recognized gameplay.",
+      "must_not_infer": "No extinguisher use or completion.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Lifepod fire seen",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.extinguisher_view",
+      "confirms_fact_ids": [
+        "sn1.extinguisher.visible"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        45,
+        240
+      ],
+      "evidence_required": "Recognizable extinguisher within gameplay; pair with context.",
+      "must_not_infer": "No use or fire-out event.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Extinguisher seen",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.extinguisher_use",
+      "confirms_fact_ids": [
+        "sn1.extinguisher.visible",
+        "sn1.extinguisher.use_seen",
+        "sn1.fire.visible"
+      ],
+      "confirms_relation_ids": [
+        "sn1.rel.extinguisher.fire"
+      ],
+      "candidate_sample_seconds": [
+        55
+      ],
+      "evidence_required": "Recognizable held tool and active spray against fire across distinct frames.",
+      "must_not_infer": "No repair, fire permanently extinguished, or hidden extinguisher tricks.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Extinguisher used on fire",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.pda_view",
+      "confirms_fact_ids": [
+        "sn1.pda.visible"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        90,
+        270
+      ],
+      "evidence_required": "Recognized PDA/inventory screen.",
+      "must_not_infer": "No blanket knowledge of all listed recipes or owned equipment.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "PDA opened",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.oxygen_hud",
+      "confirms_fact_ids": [
+        "sn1.oxygen.hud_seen"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        180,
+        360
+      ],
+      "evidence_required": "Readable O2 meter across gameplay frames.",
+      "must_not_infer": "No implied permission for emergency hints.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Oxygen meter seen",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.ocean_view",
+      "confirms_fact_ids": [
+        "sn1.ocean.visible"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        120,
+        360
+      ],
+      "evidence_required": "Recognized ocean view.",
+      "must_not_infer": "No named biome, caves, resource locations or creature properties.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Ocean seen",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.ship_view",
+      "confirms_fact_ids": [
+        "sn1.ship.visible"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        120
+      ],
+      "evidence_required": "Clear distant ship in gameplay.",
+      "must_not_infer": "No Aurora name, entry route, explosion timing or plot.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Damaged ship seen",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.boomerang_inventory",
+      "confirms_fact_ids": [
+        "sn1.fish.visible",
+        "sn1.boomerang.named",
+        "sn1.boomerang.possession_seen",
+        "sn1.boomerang.edibility_visible"
+      ],
+      "confirms_relation_ids": [
+        "sn1.rel.boomerang.edible"
+      ],
+      "candidate_sample_seconds": [
+        270
+      ],
+      "evidence_required": "Exact Boomerang tooltip tied to player inventory plus corresponding icon across two distinct frames. Storage alone is not player possession.",
+      "must_not_infer": "No cooking/water recipe, all fish edibility, or current item count.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Boomerang identified in inventory",
+      "operator_guidance": "Confirm when you see the Boomerang label in the player inventory and inspect its food tooltip. A storage item or recipe picture is not enough."
+    },
+    {
+      "id": "sn1.event.writhing_weed_label",
+      "confirms_fact_ids": [
+        "sn1.writhing_weed.named"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        180
+      ],
+      "evidence_required": "Exact target label with matching plant across two frames.",
+      "must_not_infer": "No botanical properties or resource yields.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Writhing Weed identified",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.creepvine_label",
+      "confirms_fact_ids": [
+        "sn1.creepvine.named"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        480
+      ],
+      "evidence_required": "Exact Creepvine target label and matching scene across two frames.",
+      "must_not_infer": "No seed pickup, rubber recipe or named biome.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Creepvine identified",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.flare_recipe_view",
+      "confirms_fact_ids": [
+        "sn1.flare.recipe_visible",
+        "sn1.cave_sulfur.named"
+      ],
+      "confirms_relation_ids": [
+        "sn1.rel.flare.cave_sulfur"
+      ],
+      "candidate_sample_seconds": [
+        300
+      ],
+      "evidence_required": "Exact selected Flare tooltip with readable ingredient; moderator verifies what was shown.",
+      "must_not_infer": "No crafted flare, collected sulfur, sulfur location or Repair Tool recipe.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Flare recipe inspected",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.opening_tool_names",
+      "confirms_fact_ids": [
+        "sn1.scanner.named",
+        "sn1.repair_tool.named"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        300
+      ],
+      "evidence_required": "Moderator verifies the specific item labels are actually readable.",
+      "must_not_infer": "No ownership, recipe knowledge, use or crafting.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Opening tool names inspected",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    },
+    {
+      "id": "sn1.event.seaglide_list",
+      "confirms_fact_ids": [
+        "sn1.seaglide.name_visible",
+        "sn1.seaglide.partial_display_seen"
+      ],
+      "confirms_relation_ids": [],
+      "candidate_sample_seconds": [
+        300
+      ],
+      "evidence_required": "Exact Seaglide list entry and partial counter; moderator verifies.",
+      "must_not_infer": "No scanned fragment, blueprint completion or crafted Seaglide.",
+      "automatic_confirmation_enabled": false,
+      "validation": "not_run",
+      "source_ids": [
+        "video"
+      ],
+      "label": "Seaglide list entry inspected",
+      "operator_guidance": "Confirm only the selected event you have seen in this session. The details below show exactly what becomes known."
+    }
+  ],
+  "reference_identity_aliases": [],
+  "detection_research": [
+    {
+      "id": "sn1.detector.named_inventory",
+      "target_events": [
+        "sn1.event.boomerang_inventory"
+      ],
+      "status": "proposed_candidate_only",
+      "automatic_confirmation_enabled": false
+    },
+    {
+      "id": "sn1.detector.named_target",
+      "target_events": [
+        "sn1.event.writhing_weed_label",
+        "sn1.event.creepvine_label"
+      ],
+      "status": "proposed_candidate_only",
+      "automatic_confirmation_enabled": false
+    },
+    {
+      "id": "sn1.detector.extinguisher_use",
+      "target_events": [
+        "sn1.event.extinguisher_use"
+      ],
+      "status": "secondary_candidate_only",
+      "automatic_confirmation_enabled": false
+    }
+  ],
+  "observer_guidance": "Original Subnautica only. Require specific on-screen evidence across distinct frames; name, possession, property and recipe are separate. Menus and 0/2 counters are hard negatives for item crafting/unlock. Do not identify an ambiguous held fish from shape alone. Player inventory and storage are separate. Candidates require moderator confirmation. Sample times are research notes, not an event schedule.",
+  "sources": [
+    {
+      "id": "video",
+      "title": "Subnautica Free To Use Gameplay Footage [Part 1]",
+      "url": "https://www.youtube.com/watch?v=hh5dckAV5Pg",
+      "kind": "creator_recording",
+      "verification": "Opened in Chrome; duration, description and selected decoded frames inspected. Not continuously watched or downloaded.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "publisher",
+      "title": "Unknown Worlds Video Policy",
+      "url": "https://unknownworlds.com/en/pages/video-policy",
+      "kind": "publisher_primary",
+      "verification": "Policy text read; ordinary video uses allowed subject to conditions, with a separate restriction on licensing footage.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "new_guideline",
+      "title": "Subnautica 2 Fan Content Creation Guidelines (22 May 2026)",
+      "url": "https://subnautica.com/en/policy/content-guidelines",
+      "kind": "publisher_primary",
+      "verification": "Read after delayed Chrome loading. Contains sequel AI-reference restrictions; applicability to original-game footage remains unresolved.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "rules",
+      "title": "Codex x TwitchCon Hackathon rules",
+      "url": "https://twitchcon-codex.devpost.com/rules",
+      "kind": "organizer_primary",
+      "verification": "Requirements, deadline, video, repository and third-party material provisions checked.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "steam",
+      "title": "Original Subnautica Steam listing",
+      "url": "https://store.steampowered.com/app/264710/Subnautica/",
+      "kind": "publisher_primary",
+      "verification": "Original single-player game, not Below Zero or Subnautica 2; description checked. No popularity or price claim used.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "lifepod",
+      "title": "Lifepod 5 reference",
+      "url": "https://subnautica.fandom.com/wiki/Lifepod_5?page=1&title=Lifepod_5",
+      "kind": "community_reference",
+      "verification": "Intro, separate repairs and randomized initial location; browser-visible footage is preferred for actual player evidence.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "scanner",
+      "title": "Original-game Scanner item reference",
+      "url": "https://wikily.gg/subnautica/items/scanner",
+      "kind": "community_reference",
+      "verification": "Blueprint, recipe and general scanner functions checked. Not footage evidence.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "repair",
+      "title": "Original-game Repair Tool item reference",
+      "url": "https://wikily.gg/subnautica/items/welder",
+      "kind": "community_reference",
+      "verification": "Original-game ingredient list checked; distinguish from sequel recipes.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "water",
+      "title": "Filtered Water reference",
+      "url": "https://wikily.gg/subnautica/items/filteredwater",
+      "kind": "community_reference",
+      "verification": "Bladderfish to filtered water; no assumption that this occurs in Part 1.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "bladderfish",
+      "title": "Bladderfish reference",
+      "url": "https://subnautica.fandom.com/wiki/Bladderfish_%28Subnautica%29",
+      "kind": "community_reference",
+      "verification": "Water-use relationship checked through indexed page text; species not confirmed from the inspected footage samples.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "blueprints",
+      "title": "Original-game Blueprints reference",
+      "url": "https://subnautica.fandom.com/wiki/Blueprints_%28Subnautica%29",
+      "kind": "community_reference",
+      "verification": "Discovery/unlock distinguished from item possession.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "radio",
+      "title": "Radio reference",
+      "url": "https://subnautica.fandom.com/wiki/Radio",
+      "kind": "community_reference",
+      "verification": "Radio repair distinct from hearing a message. Later dialogue was not copied into the pack.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "seaglide",
+      "title": "Original-game Seaglide reference",
+      "url": "https://subnautica.fandom.com/wiki/Seaglide_%28Subnautica%29",
+      "kind": "community_reference",
+      "verification": "Two fragments needed; partial progress is not unlock or crafting.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "peeper",
+      "title": "Peeper reference",
+      "url": "https://subnautica.fandom.com/wiki/Peeper",
+      "kind": "community_reference",
+      "verification": "Identity/edibility only used; late-story lore excluded.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "getting_started",
+      "title": "Getting Started community reference",
+      "url": "https://subnautica.fandom.com/wiki/Getting_Started",
+      "kind": "community_reference",
+      "verification": "General opening concepts only; old guide numbers conflict, so numeric nutrition/route advice is not adopted.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "problem",
+      "title": "Streamer describes Subnautica chat spoilers",
+      "url": "https://www.reddit.com/r/Twitch/comments/ldkusy/",
+      "kind": "first_person_anecdote",
+      "verification": "Direct report of unseen names and recipe hints reaching streamer before moderator deletion. Not prevalence statistics.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "automod",
+      "title": "Twitch AutoMod documentation",
+      "url": "https://help.twitch.tv/s/article/how-to-use-automod?language=en_US",
+      "kind": "platform_primary",
+      "verification": "Indexed documentation describes moderation categories and blocked terms; no documented player-discovery ledger was established.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "capture",
+      "title": "MDN getDisplayMedia",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia",
+      "kind": "technical_primary",
+      "verification": "User-gesture and fresh screen-sharing permission requirements.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "canvas",
+      "title": "MDN cross-origin canvas restrictions",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/CORS_enabled_image",
+      "kind": "technical_primary",
+      "verification": "An ordinary cross-origin player embed does not grant readable pixels.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "yt_api",
+      "title": "YouTube IFrame Player API",
+      "url": "https://developers.google.com/youtube/iframe_api_reference",
+      "kind": "technical_primary",
+      "verification": "Playback control/state and clock are available; a frame-extraction API was not established.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "twitch",
+      "title": "Twitch EventSub reference",
+      "url": "https://dev.twitch.tv/docs/eventsub/eventsub-reference/",
+      "kind": "technical_primary",
+      "verification": "Twitch chat events carry messages; they do not establish Subnautica save/discovery state.",
+      "accessed_at": "2026-10-31"
+    },
+    {
+      "id": "patch",
+      "title": "Original Subnautica 2025 patch",
+      "url": "https://www.unknownworlds.com/en/news/subnautica-2025-patch",
+      "kind": "publisher_primary",
+      "verification": "Platform/input changes exist; recording upload date alone does not establish its game build.",
+      "accessed_at": "2026-10-31"
+    }
+  ],
+  "vision_execution_allowed": false,
+  "vision_execution_status": "External image-model execution stays disabled. Experimental local OCR has a separate bounded single-fact runtime policy.",
+  "local_text_implementation": {
+    "updated_at": "2026-11-01",
+    "runtime": "firstplay/ml/local-text.mjs and automatic-progress.mjs",
+    "scope": "Eight supported names/UI facts only; no relationships, ownership or completed actions",
+    "required_evidence": "Two consecutive non-overlapping pairs; strict labels; same source/generation/epoch",
+    "validation": "Original fixtures cover all eight; isolated real recording checks do not establish general accuracy"
+  }
+}

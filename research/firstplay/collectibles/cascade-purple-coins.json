@@ -1,0 +1,210 @@
+{
+  "schema_version": "0.1",
+  "researched_at": "2026-10-30",
+  "kingdom": "Cascade",
+  "regional_coin_count": 50,
+  "status": "source_checked_group_index_not_gameplay_verified",
+  "numbering_note": "Ranges are ordinal labels from the cited Vandal guide, not official in-game coin IDs. Other guides order groups differently.",
+  "coordinate_note": "No exact coordinates, per-coin identity or automatic detection templates have been validated.",
+  "access_note": "First-visit accessibility remains unverified; do not mark every group available or known on arrival.",
+  "primary_location_source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+  "map_reference_url": "https://www.guiasnintendo.com/2c-switch/super-mario-odyssey/guia-super-mario-odyssey/monedas-02-reino-cataratas.html",
+  "cross_reference_url": "https://supermarioguides.com/guides/super-mario-odyssey/cascade-kingdom-purple-coins/",
+  "groups": [
+    {
+      "id": "smo.regional.cascade.landing_back_edge",
+      "guide_range": [
+        1,
+        3
+      ],
+      "quantity": 3,
+      "location_summary": "Behind the arrival point, at the edge.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.landing_left_ledge",
+      "guide_range": [
+        4,
+        6
+      ],
+      "quantity": 3,
+      "location_summary": "Ledge left of the starting area.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.landing_right_ledge",
+      "guide_range": [
+        7,
+        9
+      ],
+      "quantity": 3,
+      "location_summary": "Ledge right of the starting area.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.waterfall_cave",
+      "guide_range": [
+        10,
+        12
+      ],
+      "quantity": 3,
+      "location_summary": "Cave beneath the waterfall.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.bridge_recess",
+      "guide_range": [
+        13,
+        15
+      ],
+      "quantity": 3,
+      "location_summary": "Recess below the waterfall-crossing bridge.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.big_stump_ledge",
+      "guide_range": [
+        16,
+        19
+      ],
+      "quantity": 4,
+      "location_summary": "Ledge near the large-stump checkpoint.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.talkatoo_left",
+      "guide_range": [
+        20,
+        22
+      ],
+      "quantity": 3,
+      "location_summary": "Ledge left of Talkatoo.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.trex_right_rock",
+      "guide_range": [
+        23,
+        25
+      ],
+      "quantity": 3,
+      "location_summary": "Rock to the T-Rex’s right.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.trex_lower_recess",
+      "guide_range": [
+        26,
+        28
+      ],
+      "quantity": 3,
+      "location_summary": "Recess beneath the T-Rex area.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.stone_bridge_left",
+      "guide_range": [
+        29,
+        31
+      ],
+      "quantity": 3,
+      "location_summary": "Left from the Stone Bridge checkpoint.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.stone_bridge_right",
+      "guide_range": [
+        32,
+        34
+      ],
+      "quantity": 3,
+      "location_summary": "Up the checkpoint’s right-hand ledges.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.challenge_upper_route",
+      "guide_range": [
+        35,
+        38
+      ],
+      "quantity": 4,
+      "location_summary": "Upper route near the end of the nearby challenge.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.beyond_stone_bridge",
+      "guide_range": [
+        39,
+        41
+      ],
+      "quantity": 3,
+      "location_summary": "Left after crossing the bridge.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.waterfall_two_ledges",
+      "guide_range": [
+        42,
+        47
+      ],
+      "quantity": 6,
+      "location_summary": "Two ledges toward the waterfall.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    },
+    {
+      "id": "smo.regional.cascade.boss_area_island",
+      "guide_range": [
+        48,
+        50
+      ],
+      "quantity": 3,
+      "location_summary": "Floating platform near the boss area.",
+      "source_url": "https://vandal.elespanol.com/guias/guia-super-mario-odyssey-trucos-y-consejos/monedas-moradas-reino-de-las-cataratas",
+      "gameplay_verified": false,
+      "first_visit_access": null,
+      "player_knows": false
+    }
+  ]
+}
