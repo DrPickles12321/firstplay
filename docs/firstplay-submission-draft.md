@@ -1,6 +1,6 @@
 # FirstPlay — submission draft
 
-Prepared for owner review. Publication fields remain blank until an accessible repository and public YouTube video exist. The draft does not assert personal eligibility or accept submission terms.
+Prepared for owner review. The source repository is public; the YouTube field remains pending. The draft does not assert personal eligibility or accept submission terms.
 
 ## Project name
 
@@ -53,7 +53,7 @@ Independent held-out chat review, broader permissioned gameplay validation, lowe
 
 ## Submission fields
 
-- Repository URL: **PENDING PUBLICATION**
+- Repository URL: [https://github.com/DrPickles12321/firstplay](https://github.com/DrPickles12321/firstplay)
 - Public YouTube demo URL: **PENDING PUBLICATION**
 - Platform: **macOS desktop, Chrome, Node 22.13+; tested Node 22.22.3 / Codex CLI 0.164.0-alpha.11.1**
 - Setup: [judge quickstart](firstplay-judge-quickstart.md)

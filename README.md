@@ -1,5 +1,7 @@
 # FirstPlay
 
+[![FirstPlay checks](https://github.com/DrPickles12321/firstplay/actions/workflows/check.yml/badge.svg)](https://github.com/DrPickles12321/firstplay/actions/workflows/check.yml)
+
 **Keep the surprise. Keep the conversation.**
 
 FirstPlay screens Twitch chat before it reaches a streamer playing a discovery game or a no-hints challenge. Viewers keep ordinary Twitch chat. The streamer reads approved original messages inside Twitch, in a private OBS dock, or in FirstPlay's standalone reader.

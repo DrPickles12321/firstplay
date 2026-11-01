@@ -1,6 +1,6 @@
 # FirstPlay — current implementation checkpoint
 
-Updated **November 1, 2026**. This file supersedes [archived development notes](../docs/firstplay-development-history.md). No source repository, public video or Devpost entry has been published by this build task.
+Updated **November 1, 2026**. This file supersedes [archived development notes](../docs/firstplay-development-history.md). The [source repository](https://github.com/DrPickles12321/firstplay) is public with owner approval. The video and Devpost entry remain unpublished.
 
 ## Release behavior
 
@@ -51,8 +51,8 @@ Synthetic draft evaluations remain development diagnostics. Earlier reports usin
 
 ## Release scope
 
-Supported verification environment: macOS, Chrome, Node 22.22.3, Codex CLI 0.164.0-alpha.11.1. There are no project npm dependencies. The CLI release is publicly available. A read-only CI workflow for Linux controlled tests and macOS native fixtures is prepared; remote CI has not run before publication.
+Supported verification environment: macOS, Chrome, Node 22.22.3, Codex CLI 0.164.0-alpha.11.1. There are no project npm dependencies. The CLI release is publicly available. A read-only CI workflow for Linux controlled tests and macOS native fixtures is prepared; the first remote CI run is being checked after publication.
 
 The source ZIP uses an explicit allowlist and checks against configured local secrets and private capability links. It excludes `.env`, `.data`, artifacts, gameplay media and the unrelated legacy prototype. An extracted source check is part of final delivery. Original OCR fixtures are generated from bundled native source.
 
-The prepared demo is a captioned walkthrough using genuine UI captures, original test imagery and an offline Twitch integration check. It does not present synthetic labels as gameplay or claim a blind live stream. Public repository/video publication and binding Devpost submission remain owner actions after reviewing the concrete materials.
+The prepared demo is a captioned walkthrough using genuine UI captures, original test imagery and an offline Twitch integration check. It does not present synthetic labels as gameplay or claim a blind live stream. The clean source repository is published. Public video upload and binding Devpost submission remain owner actions after reviewing the concrete materials.

@@ -9,7 +9,7 @@ import { createApplication } from '../server.mjs';
 import { createProvider } from '../ml/providers.mjs';
 
 const { values } = parseArgs({ options: { 'with-text': { type: 'boolean', default: false } } });
-let app;
+let app, lastFixture;
 try {
   const recognizer = new NativeTextRecognizer(), binary = await recognizer.prepare(), directory = resolve('artifacts/firstplay-ocr-fixtures');
   await runLocalProcess(binary, ['--fixtures', directory]);
@@ -27,7 +27,9 @@ try {
   if (values['with-text']) assert.notEqual((await messagePhase('before_name_confirmation'))[0].disposition, 'allow');
   let positive;
   for (const name of ['chat-only', 'wrong-item', 'no-properties', 'blueprints', 'world', 'creepvine', 'world-no-hud', 'ingredient', 'positive']) {
-    const frames = await Promise.all(['a', 'b'].map(async suffix => `data:image/png;base64,${(await readFile(resolve(directory, `${name}-${suffix}.png`))).toString('base64')}`));
+    const paths = ['a', 'b'].map(suffix => resolve(directory, `${name}-${suffix}.png`));
+    lastFixture = { name, paths, recognizer };
+    const frames = await Promise.all(paths.map(async path => `data:image/png;base64,${(await readFile(path)).toString('base64')}`));
     const { source } = await request('/api/observations/source', { kind: 'synthetic', expectedRunId });
     const result = await request('/api/observe', { frames, source: { ...source, mediaTimes: [1, 2] }, expectedRunId });
     const expected = { 'chat-only': [], 'wrong-item': ['sn1.pda.visible'], 'no-properties': ['sn1.pda.visible'], blueprints: ['sn1.scanner.named', 'sn1.repair_tool.named', 'sn1.seaglide.name_visible'], world: ['sn1.writhing_weed.named'], creepvine: ['sn1.creepvine.named'], 'world-no-hud': [], ingredient: ['sn1.cave_sulfur.named'], positive: ['sn1.boomerang.named', 'sn1.pda.visible'] };
@@ -44,5 +46,10 @@ try {
   if (values['with-text']) { const after = await messagePhase('after_name_confirmation'); assert.equal(after[0].disposition, 'allow'); assert.equal(after[1].disposition, 'reject'); }
   const report = { kind: 'real_on_device_ocr_fixture_check', timestamp: new Date().toISOString(), passed: true, warning: 'Original text/UI fixtures, not gameplay. Verifies real Apple Vision OCR, HTTP boundaries and automatic name/UI confirmation from four fixture frames; does not establish gameplay precision/recall.', engine: recognizer.name, screenshotsSentToExternalModel: false, automaticKnowledgeUpdates: true, cases, automaticFacts: second.autoConfirmed, confirmedFacts: app.engine.ledger.state.factIds, confirmedRelations: app.engine.ledger.state.relationIds, realTextModelChecks: text };
   await mkdir('artifacts', { recursive: true }); await writeFile(values['with-text'] ? 'artifacts/firstplay-recognition-text-check.json' : 'artifacts/firstplay-recognition-check.json', JSON.stringify(report, null, 2) + '\n'); console.log(JSON.stringify(report, null, 2));
-} catch (error) { console.error(JSON.stringify({ passed: false, error: error.message })); process.exitCode = 1; }
+} catch (error) {
+  // Only this command's original generated fixtures are diagnosed, never captured gameplay.
+  // Vision results can differ across macOS releases; retain the real text/score evidence.
+  const originalFixtureOcr = lastFixture ? await lastFixture.recognizer.recognize(lastFixture.paths).then(result => result.frames).catch(() => null) : null;
+  console.error(JSON.stringify({ passed: false, error: error.message, fixture: lastFixture?.name, originalFixtureOcr })); process.exitCode = 1;
+}
 finally { await app?.close(); }
