@@ -3,8 +3,13 @@ const DEFAULTS = { enabled: true, token: null, channel: null, expiresAt: null, r
 const reserved = new Set(['directory', 'downloads', 'settings', 'search', 'inventory', 'subscriptions', 'wallet', 'videos', 'p', 'jobs', 'products', 'turbo', 'login', 'signup', 'friends', 'messages']);
 
 export function twitchChannel(value) {
-  try { const url = new URL(value); const parts = url.pathname.split('/').filter(Boolean); return url.origin === 'https://www.twitch.tv' && parts.length === 1 && /^[a-z0-9_]{1,64}$/i.test(parts[0]) && !reserved.has(parts[0].toLowerCase()) ? parts[0].toLowerCase() : null; }
-  catch { return null; }
+  try {
+    const url = new URL(value), parts = url.pathname.split('/').filter(Boolean);
+    const valid = login => /^[a-z0-9_]{1,64}$/i.test(login || '') && !reserved.has(login.toLowerCase());
+    if (url.origin === 'https://www.twitch.tv' && parts.length === 1 && valid(parts[0])) return parts[0].toLowerCase();
+    if (url.origin === 'https://dashboard.twitch.tv' && parts.length === 3 && parts[0] === 'u' && parts[2] === 'stream-manager' && valid(parts[1])) return parts[1].toLowerCase();
+    return null;
+  } catch { return null; }
 }
 
 export function createBridge(api, fetchImpl = fetch) {
@@ -18,13 +23,13 @@ export function createBridge(api, fetchImpl = fetch) {
     const result = await response.json(); if (!response.ok) throw new Error(result.error || 'FirstPlay rejected the request.'); return result;
   };
   async function notify(state) {
-    const tabs = await api.tabs.query({ url: 'https://www.twitch.tv/*' });
+    const tabs = await api.tabs.query({ url: ['https://www.twitch.tv/*', 'https://dashboard.twitch.tv/u/*/stream-manager*'] });
     await Promise.allSettled(tabs.map(tab => api.tabs.sendMessage(tab.id, { type: 'firstplay-state', enabled: state.enabled, revision: state.revision, paired: Boolean(state.token), channel: state.channel })));
   }
   const handle = async (message, sender) => {
     if (sender.id !== api.runtime.id || !message || typeof message.type !== 'string') throw new Error('Untrusted extension message.');
     const popup = sender.url === api.runtime.getURL('popup.html');
-    const content = !popup && typeof sender.url === 'string' && new URL(sender.url).origin === 'https://www.twitch.tv' && sender.frameId === 0;
+    const content = !popup && typeof sender.url === 'string' && sender.frameId === 0 && (new URL(sender.url).origin === 'https://www.twitch.tv' || new URL(sender.url).origin === 'https://dashboard.twitch.tv' && Boolean(twitchChannel(sender.url)));
     if (!popup && !content) throw new Error('Unsupported extension sender.');
     const state = await load();
     const publicState = () => ({ enabled: state.enabled, paired: Boolean(state.token), channel: state.channel, expiresAt: state.expiresAt, revision: state.revision });

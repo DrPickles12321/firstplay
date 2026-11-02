@@ -1,18 +1,51 @@
 {
   "manifest_version": 3,
-  "name": "FirstPlay — protected Twitch chat",
-  "description": "Read FirstPlay's screened chat inside Twitch. Requires the local FirstPlay service.",
-  "version": "0.1.0",
+  "name": "FirstPlay \u2014 protected Twitch chat",
+  "description": "Protected chat in Twitch Stream Manager and channel pages. Requires the local FirstPlay service.",
+  "version": "0.2.0",
   "minimum_chrome_version": "114",
-  "permissions": ["storage"],
-  "host_permissions": ["https://www.twitch.tv/*", "http://localhost/*"],
-  "background": { "service_worker": "background.mjs", "type": "module" },
-  "action": { "default_title": "FirstPlay", "default_popup": "popup.html" },
-  "content_scripts": [{
-    "matches": ["https://www.twitch.tv/*"],
-    "css": ["guard.css"],
-    "js": ["content.js"],
-    "run_at": "document_start",
-    "all_frames": false
-  }]
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.twitch.tv/*",
+    "https://dashboard.twitch.tv/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.mjs",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "FirstPlay",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.twitch.tv/*"
+      ],
+      "css": [
+        "guard.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://dashboard.twitch.tv/u/*/stream-manager*"
+      ],
+      "css": [
+        "dashboard-guard.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
 }

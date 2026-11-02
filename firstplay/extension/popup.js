@@ -3,9 +3,9 @@ let current;
 async function send(message) { const result = await chrome.runtime.sendMessage(message); if (!result?.ok) throw new Error(result?.error || 'FirstPlay could not respond.'); return result.value; }
 function render(state) {
   current = state; document.querySelector('#pairing').hidden = state.paired; document.querySelector('#paired').hidden = !state.paired;
-  status.textContent = state.paired ? state.enabled ? 'FirstPlay is on. Native chat is protected.' : 'FirstPlay is off. Twitch chat is unfiltered.' : 'Pair with your local FirstPlay service.';
+  status.textContent = state.paired ? state.enabled ? 'FirstPlay is on. Supported Twitch chat panels are protected.' : 'FirstPlay is off. Twitch chat is unfiltered.' : 'Pair with your local FirstPlay service.';
   document.querySelector('#channel').textContent = state.channel ? `Paired channel: ${state.channel}` : '';
-  document.querySelector('#toggle').textContent = state.enabled ? 'Show unfiltered Twitch chat' : 'Turn FirstPlay on';
+  const toggle = document.querySelector('#toggle'); toggle.textContent = state.enabled ? 'FirstPlay on' : 'FirstPlay off'; toggle.setAttribute('aria-checked', String(state.enabled));
 }
 function action(selector, fn) { const button = document.querySelector(selector); button.addEventListener('click', async () => { button.disabled = true; try { render(await fn()); } catch (error) { status.textContent = error.message; } finally { button.disabled = false; } }); }
 action('#pair', async () => {

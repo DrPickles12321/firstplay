@@ -4,14 +4,14 @@ The local desktop pilot is implemented and verified. The [source repository](htt
 
 ## Ready locally
 
-- Main app: **http://localhost:3211** — Twitch connected, installed Chrome reader paired, real model check passed.
+- Main app: **http://localhost:3211** — Twitch connected, installed Chrome reader paired, real model check passed. Version 0.2.0 replaces Stream Manager's My Chat widget; the popup's Protect Twitch chat switch restores native chat when off.
 - Isolated app: **http://localhost:3213** — separate runs/reviews, no Twitch connection. Existing browser sharing can keep recognition running while the page stays open.
 - Source archive: `artifacts/firstplay-source.zip`, with a separate SHA-256 file manifest. It excludes credentials, capabilities, saved chat/state, artifacts, third-party gameplay and the legacy prototype.
 - Captioned silent demo draft: `artifacts/firstplay-demo-draft.mp4` — **2 minutes 10 seconds**, 1920×1080, genuine UI captures and original test imagery. It is a walkthrough assembled from actual stills, not a live screencast.
 - [Submission description](firstplay-submission-draft.md), [judge setup](firstplay-judge-quickstart.md), [optional narration script](firstplay-demo-script.md), [current evidence](../firstplay/IMPLEMENTATION.md) and [scope/privacy](firstplay-privacy-and-scope.md).
 - [Read-only GitHub Actions checks](https://github.com/DrPickles12321/firstplay/actions/workflows/check.yml) run on repository pushes; current results are linked publicly.
 
-The release checks passed 131 controlled tests, 61 JS syntax checks, nine original native OCR pairs, real-model before/after/undo and a fresh two-message Twitch integration check. Saved Mario/Subnautica progress and four genuine assisted review judgments were preserved. These are bounded implementation checks, not representative model-accuracy measurements.
+The release checks passed 134 controlled tests, 61 JS syntax checks, nine original native OCR pairs, real-model before/after/undo and a fresh two-message Twitch integration check. Saved Mario/Subnautica progress and four genuine assisted review judgments were preserved. These are bounded implementation checks, not representative model-accuracy measurements.
 
 ## Final publication actions
 

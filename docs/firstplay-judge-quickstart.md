@@ -55,7 +55,7 @@ Viewers open `/status` and sign in with Twitch to see only their own message sta
 | `npm run live-check` | Two authorized fixed posts to the connected Twitch channel |
 | `npm run package:source` | Credential-filtered source ZIP and SHA-256 manifest |
 
-The latest release checkpoint passed 131 controlled tests and 61 JS syntax checks. Tests verify state, boundaries and failure behavior; they do not establish model accuracy. The four-scene video rehearsal and 79-case review desk under **Lab** are optional development tools, not mandatory streaming setup.
+The latest release checkpoint passed 134 controlled tests and 61 JS syntax checks. Tests verify state, boundaries and failure behavior; they do not establish model accuracy. The four-scene video rehearsal and 79-case review desk under **Lab** are optional development tools, not mandatory streaming setup.
 
 ## Troubleshooting
 

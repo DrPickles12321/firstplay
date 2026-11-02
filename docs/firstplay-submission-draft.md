@@ -20,7 +20,7 @@ Emote-only chat can protect a first playthrough, but it takes away much of the c
 
 ## What it does
 
-FirstPlay reads real Twitch chat through EventSub and screens messages before they enter a private reader. The optional Chrome integration adds FirstPlay and Session tabs on Twitch. Viewers need no extension, keep their ordinary conversation and can check their own message-delivery status separately.
+FirstPlay reads real Twitch chat through EventSub and screens messages before they enter a private reader. The optional Chrome integration replaces Stream Manager’s My Chat with a protected reader and also adds FirstPlay and Session tabs on channel pages. Viewers need no extension, keep their ordinary conversation and can check their own message-delivery status separately.
 
 A text model interprets meaning against authored game context and explicit playthrough knowledge. A separate policy gate permits benign known-event discussion, rejects obvious spoilers/instructions and holds uncertain messages briefly for moderator review. Knowing a name is different from knowing a recipe or solution.
 
@@ -41,7 +41,7 @@ The hardest distinction was between an observed name and inferred future knowled
 ## What works today
 
 - Real Twitch → EventSub → Codex → installed reader verification: a greeting rendered and received a receipt; a gameplay instruction stayed absent. Both original posts remained in ordinary Twitch chat.
-- 131 controlled tests, 61 JavaScript syntax checks and nine native OCR fixture pairs passed the release preflight.
+- 134 controlled tests, 61 JavaScript syntax checks and nine native OCR fixture pairs passed the release preflight.
 - Real-model before/after/undo checks passed. A genuine recording established the PDA screen automatically; original fixtures exercise all eight supported mappings.
 - Separate saved game runs, expiring review, private reasons, evidence/history/Undo, one-hint requests, viewer status and isolated rehearsal tools are implemented.
 

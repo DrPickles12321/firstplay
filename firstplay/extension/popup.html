@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FirstPlay</title><link rel="stylesheet" href="popup.css"><script src="popup.js" defer></script></head><body>
-<header><span class="mark">FP</span><div><h1>FirstPlay</h1><p>Protected chat inside Twitch</p></div></header>
+<header><span class="mark">FP</span><div><h1>FirstPlay</h1><p>Protected chat in Stream Manager</p></div></header>
 <p id="status" role="status">Checking connection…</p>
 <section id="pairing"><label for="code">Pairing code</label><input id="code" maxlength="64" placeholder="Paste the code from FirstPlay" autocomplete="off" spellcheck="false"><p class="help">In FirstPlay, open Settings → Chrome extension → Create pairing code.</p><button id="pair">Pair extension</button></section>
-<section id="paired" hidden><p id="channel"></p><button id="toggle"></button><button id="forget" class="secondary">Disconnect pairing</button></section>
+<section id="paired" hidden><p id="channel"></p><button id="toggle" type="button" role="switch" aria-checked="true" aria-label="Protect Twitch chat"></button><button id="forget" class="secondary">Disconnect pairing</button></section>
 <a href="http://localhost:3211/?settings=1" target="_blank" rel="noreferrer">Open FirstPlay settings ↗</a>
-<p class="help">While enabled, Twitch chat stays hidden unless FirstPlay supplies approved messages. Other channels are covered too. Your local FirstPlay service must be running.</p>
+<p class="help">Works in Stream Manager’s My Chat and Twitch channel pages. Turning protection off restores ordinary unfiltered chat. Site access must be enabled and your local FirstPlay service must be running.</p>
 </body></html>

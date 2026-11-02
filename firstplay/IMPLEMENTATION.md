@@ -29,7 +29,7 @@ Evidence and exact before/after knowledge changes are private and auditable. Und
 
 | Check | Actual result |
 |---|---|
-| Controlled tests / JavaScript syntax | 131 tests and 61 files passed in the release preflight |
+| Controlled tests / JavaScript syntax | 134 tests and 61 files passed in the release preflight |
 | Native OCR / HTTP | Nine pairs of original fixtures exercised all eight mappings plus negative contexts; no external image model |
 | Real text-model before/after/undo | Eight synthetic messages passed the expected containment/delivery and state/authority checks |
 | Native + real text model | Named reaction hidden before a single-fact grant and allowed after; water-making instruction rejected in both phases |
@@ -58,3 +58,11 @@ Supported verification environment: macOS, Chrome, Node 22.22.3, Codex CLI 0.164
 The source ZIP uses an explicit allowlist and checks against configured local secrets and private capability links. It excludes `.env`, `.data`, artifacts, gameplay media and the unrelated legacy prototype. An extracted source check is part of final delivery. Original OCR fixtures are generated from bundled native source.
 
 The prepared demo is a captioned walkthrough using genuine UI captures, original test imagery and an offline Twitch integration check. It does not present synthetic labels as gameplay or claim a blind live stream. The clean source repository is published. Public video upload and binding Devpost submission remain owner actions after reviewing the concrete materials.
+
+## Stream Manager chat integration
+
+The Chrome extension now supports the paired channel’s `/u/<channel>/stream-manager` route. It fills the existing My Chat widget body, keeps its header/layout controls, and uses the same approved-only feed. The popup’s on/off switch restores native chat when off. Dashboard site access is newly declared; no extra Twitch scopes or owner API access are introduced.
+
+Background regressions cover dashboard route/channel/frame boundaries and notifications to both supported surfaces. Eleven original local dashboard fixture checks passed, including layout, first-paint hiding, on/off restoration, remounts, failure behavior, hidden-reader receipts and stale-response handling.
+
+After the user granted dashboard access and reloaded version 0.2.0, the actual Chrome Stream Manager showed FirstPlay inside My Chat. Its bounds matched the widget body; native chat had no visible rectangles; Stream Preview and other widgets stayed available. A real Twitch greeting rendered and received a receipt, while the water-making instruction was rejected and absent. Session metadata and keyboard tab navigation worked. This was one offline English desktop channel; the fixture supplies the separate on/off, resize and failure checks. Local evidence: `artifacts/firstplay-dashboard-live-check.json` and `artifacts/firstplay-dashboard-fixture-check.json`.

@@ -4,11 +4,11 @@
 
 **Keep the surprise. Keep the conversation.**
 
-FirstPlay screens Twitch chat before it reaches a streamer playing a discovery game or a no-hints challenge. Viewers keep ordinary Twitch chat. The streamer reads approved original messages inside Twitch, in a private OBS dock, or in FirstPlay's standalone reader.
+FirstPlay screens Twitch chat before it reaches a streamer playing a discovery game or a no-hints challenge. Viewers keep ordinary Twitch chat. The streamer reads approved original messages in Stream Manager's My Chat widget, on the Twitch channel page, in a private OBS dock, or in FirstPlay's standalone reader.
 
 Its useful distinction is **what the player has discovered**. A reaction mentioning an unseen creature can stay hidden, then become eligible after the name appears on screen. Knowing the name still does not permit an instruction about what to do with it.
 
-<img src="docs/images/firstplay-reader.png" alt="The real installed FirstPlay reader on Twitch showing an approved connection-check message" width="340">
+<img src="docs/images/firstplay-reader.png" alt="The real installed FirstPlay reader inside Stream Manager's My Chat widget showing an approved connection-check message" width="340">
 
 ## Try it
 
@@ -53,7 +53,7 @@ Optional **Enable test messages** adds `user:write:chat`. Then `npm run live-che
 | Lab | Optional case review and four-scene video/chat rehearsal; not needed during a stream |
 | Viewer status | A signed-in chatter's own delivered/pending/not-delivered markers |
 
-The optional extension adds **FirstPlay / Session** tabs to desktop Twitch channel pages. It covers native chat while enabled, including other channels; an unavailable service or unsupported layout keeps chat covered. Pairing grants only channel-bound reader access. This is a local unpacked prototype, not a Web Store release. See its [permissions and limits](firstplay/extension/README.md).
+The optional extension replaces **My Chat** inside desktop Twitch **Stream Manager**, and adds **FirstPlay / Session** tabs on public channel pages. Its popup has one on/off switch; switching off restores native chat. It covers native chat while enabled, including other channels; an unavailable service or unsupported layout keeps chat covered. Pairing grants only channel-bound reader access. This is a local unpacked prototype, not a Web Store release. See its [permissions and limits](firstplay/extension/README.md).
 
 Use **Private OBS dock** in OBS's Custom Browser Docks for the streamer. Use the separate **Broadcast overlay** URL only when approved chat should appear in the outgoing video. Keep capability URLs private. FirstPlay does not delete or alter viewers' original Twitch messages.
 
@@ -87,7 +87,7 @@ The reader receives approved text only. It cannot fetch hidden messages, future 
 
 - **Subnautica opening:** 40 authored facts, nine relationships, 14 manual events and eight bounded automatic text mappings.
 - **Mario Cap → Cascade:** preserved separate run, 47 opening facts, nine relationships and curated events. The 836-objective Moon reference index represents 880 Moons; it is not a whole-game reveal graph. Mario image suggestions remain manual and their positive gameplay accuracy is unvalidated.
-- Latest release verification: **131 controlled tests, 61 JavaScript syntax checks**, nine native OCR fixture pairs, real-model before/after/undo and a fresh two-message Twitch → EventSub → model → installed-reader check.
+- Latest release verification: **134 controlled tests, 61 JavaScript syntax checks**, nine native OCR fixture pairs, real-model before/after/undo and a fresh two-message Twitch → EventSub → model → installed-reader check.
 - Four saved assisted human scene judgments remain intact. The 79-case Subnautica benchmark has **no completed independent human review**; synthetic draft-label scores are development diagnostics, not an accuracy claim.
 - Text screening usually takes several seconds on the tested Codex route. Representative high-volume chat, multilingual play and broad game coverage remain unvalidated. Display names, TTS, alerts and other chat clients remain exposure paths.
 
